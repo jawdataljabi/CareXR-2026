@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/082a0de8-26b4-4dca-86eb-e45b5c21f169>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> fbbfc3bd-8bfb-41fb-b9b8-04b1823a0d86
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> fbbfc3bd-8bfb-41fb-b9b8-04b1823a0d86
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 7f990982-04d9-482e-bd48-d7330eff402c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/7f990982-04d9-482e-bd48-d7330eff402c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6c29be7e-0513-448a-8fa2-2d7e6b0739b4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backendUrl: false
+    debugMode: false
+    emotionText: false
+    interval: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - emotionText: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      backendUrl: "https://YOUR-NGROK-URL.ngrok-free.app/analyze"
+      interval: 1.500000
+      debugMode: true
+  ScriptTypes:
+    -
+      {}

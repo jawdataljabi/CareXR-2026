@@ -26,8 +26,11 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    debugLogInterval: false
+    debugMode: false
     emotionText: false
     emotionThreshold: false
+    expressionMultiplier: false
     faceMeshVisual: false
     hysteresis: false
     smoothingFactor: false
@@ -47,6 +50,9 @@
       emotionThreshold: 0.250000
       smoothingFactor: 0.300000
       hysteresis: 0.080000
+      expressionMultiplier: !<float> 3.000000
+      debugMode: true
+      debugLogInterval: !<float> 2.000000
   ScriptTypes:
     -
       {}
