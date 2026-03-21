@@ -35,7 +35,7 @@ def json_response(data, status=200):
 app = Flask(__name__)
 CORS(app)
 
-MAX_INPUT_DIM = 320
+MAX_INPUT_DIM = 480
 
 EMOTION_MAP = {
     "happy": "Joy",
@@ -98,7 +98,7 @@ def analyze():
             frame,
             actions=["emotion"],
             enforce_detection=False,
-            detector_backend="opencv",
+            detector_backend="mtcnn",
             silent=True,
         )
         t_model = time.perf_counter() - t0
@@ -137,14 +137,14 @@ def analyze():
 
 if __name__ == "__main__":
     print("DeepFace Emotion Server starting on 0.0.0.0:5001")
-    print(f"  Max input: {MAX_INPUT_DIM}px | Detector: opencv")
+    print(f"  Max input: {MAX_INPUT_DIM}px | Detector: mtcnn")
     print("Warming up DeepFace model...")
 
     try:
         dummy = np.zeros((48, 48, 3), dtype=np.uint8)
         DeepFace.analyze(
             dummy, actions=["emotion"], enforce_detection=False,
-            detector_backend="opencv", silent=True,
+            detector_backend="mtcnn", silent=True,
         )
         print("Model loaded successfully.")
     except Exception as e:

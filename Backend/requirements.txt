@@ -5,3 +5,4 @@ tf-keras
 opencv-python-headless
 python-dotenv
 numpy
+mtcnn
