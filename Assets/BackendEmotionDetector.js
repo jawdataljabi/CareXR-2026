@@ -22,14 +22,8 @@ var cameraTextureProvider;
 var lastSentTime = 0;
 var isSending = false;
 var faceIsTracked = false;
-var lastEmotion = "";
 var lastLabel = "";
 var isSpectacles = false;
-
-// Client-side vote buffer for stability
-var VOTE_BUFFER_SIZE = 3;
-var voteBuffer = [];
-var confirmedEmotion = "";
 
 var EMOJI_MAP = {
     "Joy": "\u{1F60A}",
@@ -37,23 +31,6 @@ var EMOJI_MAP = {
     "Anger": "\u{1F621}",
     "Neutral": "\u{1F610}"
 };
-
-function majorityVote(buffer) {
-    if (buffer.length === 0) return "";
-    var counts = {};
-    for (var i = 0; i < buffer.length; i++) {
-        counts[buffer[i]] = (counts[buffer[i]] || 0) + 1;
-    }
-    var best = "";
-    var bestCount = 0;
-    for (var key in counts) {
-        if (counts[key] > bestCount) {
-            bestCount = counts[key];
-            best = key;
-        }
-    }
-    return best;
-}
 
 function showEmotion(label) {
     if (!script.emotionText) return;
@@ -71,10 +48,6 @@ function debugLog(msg) {
     if (script.debugMode) {
         print("[BackendEmotion] " + msg);
     }
-}
-
-function getResetUrl() {
-    return script.backendUrl.replace("/analyze", "/reset");
 }
 
 script.createEvent('OnStartEvent').bind(function() {
@@ -112,24 +85,9 @@ script.createEvent('OnStartEvent').bind(function() {
     faceLost.faceIndex = 0;
     faceLost.bind(function() {
         faceIsTracked = false;
-        lastEmotion = "";
         lastLabel = "";
-        confirmedEmotion = "";
-        voteBuffer = [];
         hideEmotion();
         debugLog("Face lost.");
-
-        // Tell backend to reset its smoothing state
-        try {
-            var resetReq = new Request(getResetUrl(), {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'ngrok-skip-browser-warning': 'true'
-                }
-            });
-            internetModule.fetch(resetReq);
-        } catch (e) { /* ignore */ }
     });
 
     cameraTextureProvider.onNewFrame.add(function(cameraFrame) {
@@ -191,20 +149,7 @@ async function sendToBackend(base64Image) {
             debugLog(emotion + " (" + (confidence * 100).toFixed(0) + "%) " + latency + "ms");
 
             if (emotion !== "none" && faceIsTracked) {
-                // Client-side vote buffer: only switch display when we have consensus
-                voteBuffer.push(emotion);
-                if (voteBuffer.length > VOTE_BUFFER_SIZE) {
-                    voteBuffer.shift();
-                }
-
-                var voted = majorityVote(voteBuffer);
-
-                if (voted !== confirmedEmotion) {
-                    confirmedEmotion = voted;
-                    var emoji = EMOJI_MAP[voted] || "";
-                    lastLabel = emoji + " " + voted;
-                }
-
+                lastLabel = label || (EMOJI_MAP[emotion] || "") + " " + emotion;
                 showEmotion(lastLabel);
             } else if (!faceIsTracked) {
                 hideEmotion();
@@ -212,17 +157,11 @@ async function sendToBackend(base64Image) {
         } else {
             var errorText = await response.text();
             print("[BackendEmotion] Backend error (" + response.status + "): " + errorText);
-
-            if (lastLabel && faceIsTracked) {
-                showEmotion(lastLabel);
-            }
+            if (lastLabel && faceIsTracked) showEmotion(lastLabel);
         }
     } catch (error) {
         print("[BackendEmotion] Network error: " + error);
-
-        if (lastLabel && faceIsTracked) {
-            showEmotion(lastLabel);
-        }
+        if (lastLabel && faceIsTracked) showEmotion(lastLabel);
     } finally {
         isSending = false;
     }

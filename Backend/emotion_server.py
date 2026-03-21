@@ -14,7 +14,6 @@ import cv2
 import numpy as np
 import base64
 import time
-from collections import deque
 
 
 class NumpySafeEncoder(json.JSONEncoder):
@@ -36,11 +35,7 @@ def json_response(data, status=200):
 app = Flask(__name__)
 CORS(app)
 
-# --- Configuration ---
-MAX_INPUT_DIM = 320  # downscale camera frame to this before analysis
-SMOOTHING_ALPHA = 0.45  # EMA blending factor (higher = more responsive, lower = more stable)
-HISTORY_SIZE = 5  # number of frames for majority-vote smoothing
-DETECTOR_BACKEND = "opencv"  # fastest face detector; skip = no detection at all
+MAX_INPUT_DIM = 320
 
 EMOTION_MAP = {
     "happy": "Joy",
@@ -58,41 +53,6 @@ EMOJI_MAP = {
     "Anger": "\U0001F621",
     "Neutral": "\U0001F610",
 }
-
-TARGET_EMOTIONS = ["Joy", "Sadness", "Anger", "Neutral"]
-
-# --- Temporal smoothing state ---
-ema_scores = {e: 0.0 for e in TARGET_EMOTIONS}
-recent_votes = deque(maxlen=HISTORY_SIZE)
-
-
-def reset_smoothing():
-    global ema_scores, recent_votes
-    ema_scores = {e: 0.0 for e in TARGET_EMOTIONS}
-    recent_votes.clear()
-
-
-def smooth_prediction(raw_mapped_scores):
-    """
-    Combines exponential moving average with majority vote.
-    Returns (emotion, confidence) after smoothing.
-    """
-    global ema_scores
-
-    for e in TARGET_EMOTIONS:
-        raw = raw_mapped_scores.get(e, 0.0)
-        ema_scores[e] = SMOOTHING_ALPHA * raw + (1.0 - SMOOTHING_ALPHA) * ema_scores[e]
-
-    ema_best = max(TARGET_EMOTIONS, key=lambda e: ema_scores[e])
-    recent_votes.append(ema_best)
-
-    # Majority vote over recent window for final stability
-    vote_counts = {}
-    for v in recent_votes:
-        vote_counts[v] = vote_counts.get(v, 0) + 1
-    final_emotion = max(vote_counts, key=vote_counts.get)
-
-    return final_emotion, round(ema_scores[final_emotion], 3)
 
 
 def decode_and_downscale(b64_string):
@@ -117,13 +77,6 @@ def health():
     return json_response({"status": "ok", "timestamp": float(time.time())})
 
 
-@app.route("/reset", methods=["POST"])
-def reset():
-    """Call when face is lost to reset smoothing state."""
-    reset_smoothing()
-    return json_response({"status": "reset"})
-
-
 @app.route("/analyze", methods=["POST"])
 def analyze():
     t_start = time.perf_counter()
@@ -145,7 +98,7 @@ def analyze():
             frame,
             actions=["emotion"],
             enforce_detection=False,
-            detector_backend=DETECTOR_BACKEND,
+            detector_backend="opencv",
             silent=True,
         )
         t_model = time.perf_counter() - t0
@@ -154,31 +107,26 @@ def analyze():
             return json_response({"emotion": "none", "confidence": 0.0})
 
         result = results[0] if isinstance(results, list) else results
+        dominant = str(result.get("dominant_emotion", "neutral"))
         raw_scores = {k: float(v) for k, v in result.get("emotion", {}).items()}
+        confidence = round(raw_scores.get(dominant, 0.0) / 100.0, 3)
 
-        # Map DeepFace's 7 emotions to our 4 target emotions
-        mapped_scores = {e: 0.0 for e in TARGET_EMOTIONS}
-        for deepface_emotion, score in raw_scores.items():
-            target = EMOTION_MAP.get(deepface_emotion, "Neutral")
-            mapped_scores[target] += score / 100.0
-
-        # Apply temporal smoothing
-        emotion, confidence = smooth_prediction(mapped_scores)
-        emoji = EMOJI_MAP.get(emotion, "")
+        mapped = EMOTION_MAP.get(dominant, "Neutral")
+        emoji = EMOJI_MAP.get(mapped, "")
 
         t_total = time.perf_counter() - t_start
 
         print(
             f"[{time.strftime('%H:%M:%S')}] "
-            f"{emoji} {emotion} ({confidence:.0%}) | "
-            f"decode:{t_decode*1000:.0f}ms model:{t_model*1000:.0f}ms total:{t_total*1000:.0f}ms | "
-            f"frame:{frame.shape[1]}x{frame.shape[0]}"
+            f"{emoji} {mapped} ({confidence:.0%}) "
+            f"[raw:{dominant}] | "
+            f"decode:{t_decode*1000:.0f}ms model:{t_model*1000:.0f}ms total:{t_total*1000:.0f}ms"
         )
 
         return json_response({
-            "emotion": emotion,
+            "emotion": mapped,
             "confidence": confidence,
-            "label": f"{emoji} {emotion}",
+            "label": f"{emoji} {mapped}",
             "latency_ms": round(t_total * 1000),
         })
 
@@ -189,15 +137,14 @@ def analyze():
 
 if __name__ == "__main__":
     print("DeepFace Emotion Server starting on 0.0.0.0:5001")
-    print(f"  Detector: {DETECTOR_BACKEND} | Max input: {MAX_INPUT_DIM}px")
-    print(f"  Smoothing: alpha={SMOOTHING_ALPHA}, window={HISTORY_SIZE}")
+    print(f"  Max input: {MAX_INPUT_DIM}px | Detector: opencv")
     print("Warming up DeepFace model...")
 
     try:
         dummy = np.zeros((48, 48, 3), dtype=np.uint8)
         DeepFace.analyze(
             dummy, actions=["emotion"], enforce_detection=False,
-            detector_backend=DETECTOR_BACKEND, silent=True,
+            detector_backend="opencv", silent=True,
         )
         print("Model loaded successfully.")
     except Exception as e:
@@ -206,5 +153,4 @@ if __name__ == "__main__":
     print("Server ready. Endpoints:")
     print("  GET  /health   - connectivity check")
     print("  POST /analyze  - emotion detection")
-    print("  POST /reset    - reset smoothing state (call on face lost)")
     app.run(host="0.0.0.0", port=5001, debug=False, threaded=True)
