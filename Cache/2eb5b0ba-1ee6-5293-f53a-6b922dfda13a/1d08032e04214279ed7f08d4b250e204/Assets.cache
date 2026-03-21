@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    278aa89a-eca7-40c1-bbf8-94a107cbe82a: 2eb5b0ba-1ee6-5293-f53a-6b922dfda13a/1d08032e04214279ed7f08d4b250e204/Data/reflection_4.jpg
+  Assets:
+    - !<FileTexture/278aa89a-eca7-40c1-bbf8-94a107cbe82a>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 256
+        Height: 170
+  SourceHash: 1d08032e04214279ed7f08d4b250e204
+  FileHash: 20c6cb35653c5a5e4944d88189bebfcc
+  NativePackageItems:
+    []

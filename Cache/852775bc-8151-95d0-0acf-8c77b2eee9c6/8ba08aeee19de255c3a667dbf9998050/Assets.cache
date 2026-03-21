@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    22228119-14df-4196-b3d6-f17ff60021ec: 852775bc-8151-95d0-0acf-8c77b2eee9c6/8ba08aeee19de255c3a667dbf9998050/Data/refl.jpg
+  Assets:
+    - !<FileTexture/22228119-14df-4196-b3d6-f17ff60021ec>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 512
+        Height: 512
+  SourceHash: 8ba08aeee19de255c3a667dbf9998050
+  FileHash: 662c174c3a0799a9da28c832cfa57676
+  NativePackageItems:
+    []

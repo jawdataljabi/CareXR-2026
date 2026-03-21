@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    87d81450-9aca-484c-85c0-6cdae77d5c96: 2bdee3c1-ce04-71e7-e94c-89a1534cdf67/ebd25e8d266a52f5dc45114b1218d584/Data/lenses_darken.jpg
+  Assets:
+    - !<FileTexture/87d81450-9aca-484c-85c0-6cdae77d5c96>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 32
+        Height: 32
+  SourceHash: ebd25e8d266a52f5dc45114b1218d584
+  FileHash: c435554fa36794387635de7fc43a76cb
+  NativePackageItems:
+    []

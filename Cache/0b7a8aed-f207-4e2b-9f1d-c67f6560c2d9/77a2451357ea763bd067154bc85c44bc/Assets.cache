@@ -1,0 +1,10 @@
+- !<AssetCache>
+  AssetFiles:
+    250f4fcb-1d44-4c90-a1cf-4748c558b135: 0b7a8aed-f207-4e2b-9f1d-c67f6560c2d9/77a2451357ea763bd067154bc85c44bc/Data/module.json
+  Assets:
+    - !<JsonAsset/250f4fcb-1d44-4c90-a1cf-4748c558b135>
+      PackagePath: ""
+  SourceHash: 77a2451357ea763bd067154bc85c44bc
+  FileHash: 5ec3e3dc79ed146d061b375c97d6a70c
+  NativePackageItems:
+    []

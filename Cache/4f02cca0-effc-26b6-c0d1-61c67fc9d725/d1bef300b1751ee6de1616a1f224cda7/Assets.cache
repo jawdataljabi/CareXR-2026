@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    aa8f8144-1089-4692-93fa-b3e3c42f1eed: 4f02cca0-effc-26b6-c0d1-61c67fc9d725/d1bef300b1751ee6de1616a1f224cda7/Data/polySurface21.mesh
+  Assets:
+    - !<FileMesh/aa8f8144-1089-4692-93fa-b3e3c42f1eed>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 157
+        Vertices: 97
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 4.739237, y: 4.308129, z: 0.682209}
+  SourceHash: d1bef300b1751ee6de1616a1f224cda7
+  FileHash: 930248bad5364ac6da3b0dced0aeb43d
+  NativePackageItems:
+    []

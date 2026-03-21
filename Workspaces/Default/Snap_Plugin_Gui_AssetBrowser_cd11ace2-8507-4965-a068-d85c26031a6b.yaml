@@ -1,0 +1,63 @@
+CollapsedEntities:
+  type: stringset
+  value:
+    size: 57
+    values:
+      - Glasses Pack 2.lspkg
+      - Glasses Pack 2.lspkg/Glasses_Pack_2__PUT_UNDER_MAIN_CAM.prefab
+      - Glasses Pack 2.lspkg/Materials
+      - Glasses Pack 2.lspkg/Materials/Glasses 3
+      - Glasses Pack 2.lspkg/Materials/Glasses 3/glass.mat
+      - Glasses Pack 2.lspkg/Materials/Glasses 3/gold.mat
+      - Glasses Pack 2.lspkg/Materials/Glasses 3/oprava.mat
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 1
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 1/Occluder.mat
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 1/frame.mat
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 1/glass.mat
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 2
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 2/frame.mat
+      - Glasses Pack 2.lspkg/Materials/Sunglasses 2/glass.mat
+      - Glasses Pack 2.lspkg/Meshes
+      - Glasses Pack 2.lspkg/Meshes/Meshes0
+      - Glasses Pack 2.lspkg/Meshes/Meshes0/glasses
+      - Glasses Pack 2.lspkg/Meshes/Meshes0/glasses/Meshes
+      - Glasses Pack 2.lspkg/Meshes/Meshes0/glasses/Meshes/frame.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes0/glasses/Meshes/lenses.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes0/glasses/Meshes/mosepads.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes0/glasses/Meshes/nose.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/face2.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/face3.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/pCube1.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/polySurface18.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/polySurface19.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/polySurface20.mesh
+      - Glasses Pack 2.lspkg/Meshes/Meshes2/polySurface21.mesh
+      - Glasses Pack 2.lspkg/Meshes/meshes
+      - Glasses Pack 2.lspkg/Meshes/meshes/mesh
+      - Glasses Pack 2.lspkg/Meshes/meshes/mesh/Meshes
+      - Glasses Pack 2.lspkg/Meshes/meshes/mesh/Meshes/frame.mesh
+      - Glasses Pack 2.lspkg/Meshes/meshes/mesh/Meshes/glasses_2.mesh
+      - Glasses Pack 2.lspkg/Meshes/meshes/mesh/Meshes/msh_mask_head.mesh
+      - Glasses Pack 2.lspkg/Meshes/meshes/mesh/Meshes/wishbones.mesh
+      - Glasses Pack 2.lspkg/Shaders
+      - Glasses Pack 2.lspkg/Shaders/Occluder.ss_graph
+      - Glasses Pack 2.lspkg/Shaders/frame.ss_graph
+      - Glasses Pack 2.lspkg/Shaders/uber.glsl
+      - Glasses Pack 2.lspkg/Textures
+      - Glasses Pack 2.lspkg/Textures/MaterialParams.png
+      - Glasses Pack 2.lspkg/Textures/Normal.png
+      - Glasses Pack 2.lspkg/Textures/bl1.jpg
+      - Glasses Pack 2.lspkg/Textures/color.jpg
+      - Glasses Pack 2.lspkg/Textures/glass_refl.jpg
+      - Glasses Pack 2.lspkg/Textures/lenses_darken.jpg
+      - Glasses Pack 2.lspkg/Textures/opacity_mask.jpg
+      - Glasses Pack 2.lspkg/Textures/opacity_mask.png
+      - Glasses Pack 2.lspkg/Textures/pier_2_diff.png
+      - Glasses Pack 2.lspkg/Textures/pier_2_spec.png
+      - Glasses Pack 2.lspkg/Textures/refl.jpg
+      - Glasses Pack 2.lspkg/Textures/refl_gold.jpg
+      - Glasses Pack 2.lspkg/Textures/reflection_4.jpg
+      - Glasses Pack 2.lspkg/Textures/shadow.jpg
+      - Glasses Pack 2.lspkg/package.native
+  options: 4

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    58fece38-b8a3-4ea7-ba4c-13117acd33f3: 0d3c71b2-73b2-e69d-8106-b592fea1b87a/f9b5ed1fbefd935952d3c696f75107e9/Data/pier_2_diff.png
+  Assets:
+    - !<FileTexture/58fece38-b8a3-4ea7-ba4c-13117acd33f3>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 64
+        Height: 32
+  SourceHash: f9b5ed1fbefd935952d3c696f75107e9
+  FileHash: 68c832c2ad69e6b9c83ab2c3c265126a
+  NativePackageItems:
+    []

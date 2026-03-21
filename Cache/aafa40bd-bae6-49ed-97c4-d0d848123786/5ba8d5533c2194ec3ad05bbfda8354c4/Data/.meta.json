@@ -1,0 +1,33 @@
+{
+    "id": "6cCRBB2Eek7J8jG7Go0GE7",
+    "meta": {
+        "max_ls": {
+            "build": -1,
+            "major": -1,
+            "minor": -1,
+            "patch": -1
+        },
+        "min_ls": {
+            "build": 0,
+            "major": 5,
+            "minor": 15,
+            "patch": 0
+        },
+        "name": "[ChatTool] API Definitions"
+    },
+    "packageInfo": {
+        "version": {
+            "build": -1,
+            "major": -1,
+            "minor": -1,
+            "patch": -1
+        }
+    },
+    "type": "JsPlugins",
+    "version": {
+        "hash": "af91eb8782393e3c6f2e7f82b17a5dab",
+        "major": 5,
+        "minor": 15,
+        "patch": 0
+    }
+}

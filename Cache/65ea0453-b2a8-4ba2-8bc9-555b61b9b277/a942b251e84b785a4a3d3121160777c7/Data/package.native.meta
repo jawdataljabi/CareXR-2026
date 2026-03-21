@@ -1,0 +1,14 @@
+- !<AssetImportMetadata/1fee4aba-35bb-4d4f-8bff-81d6d6d0cc22>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> 1771938e-8632-4649-a1e9-687693b43af2
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> 1771938e-8632-4649-a1e9-687693b43af2
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/3a1a6279-9aea-49b1-bfcf-db2caa722573>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

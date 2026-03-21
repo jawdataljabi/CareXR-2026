@@ -1,0 +1,10 @@
+- !<AssetCache>
+  AssetFiles:
+    fced6bef-ad91-4c71-9785-f8da487e762a: aafa40bd-bae6-49ed-97c4-d0d848123786/5ba8d5533c2194ec3ad05bbfda8354c4/Data/.meta.json
+  Assets:
+    - !<JsonAsset/fced6bef-ad91-4c71-9785-f8da487e762a>
+      PackagePath: ""
+  SourceHash: 5ba8d5533c2194ec3ad05bbfda8354c4
+  FileHash: caa2cf550b1de4f1fb2ce69933bbef88
+  NativePackageItems:
+    []

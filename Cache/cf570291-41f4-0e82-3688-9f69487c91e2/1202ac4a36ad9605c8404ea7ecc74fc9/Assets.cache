@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    dca98a29-8041-4103-b0fb-9e6e28dd6101: cf570291-41f4-0e82-3688-9f69487c91e2/1202ac4a36ad9605c8404ea7ecc74fc9/Data/face2.mesh
+  Assets:
+    - !<FileMesh/dca98a29-8041-4103-b0fb-9e6e28dd6101>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 1680
+        Vertices: 1630
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 13.335487, y: 4.765974, z: 1.125381}
+  SourceHash: 1202ac4a36ad9605c8404ea7ecc74fc9
+  FileHash: 644d5b725d004d5d530dbcc74c871d7b
+  NativePackageItems:
+    []

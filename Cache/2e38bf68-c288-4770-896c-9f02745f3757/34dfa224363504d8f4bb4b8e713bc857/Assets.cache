@@ -1,0 +1,10 @@
+- !<AssetCache>
+  AssetFiles:
+    bb8d852c-6c99-4040-9c50-f46d9c24e26d: 2e38bf68-c288-4770-896c-9f02745f3757/34dfa224363504d8f4bb4b8e713bc857/Data/ls-api-definition.json
+  Assets:
+    - !<JsonAsset/bb8d852c-6c99-4040-9c50-f46d9c24e26d>
+      PackagePath: ""
+  SourceHash: 34dfa224363504d8f4bb4b8e713bc857
+  FileHash: 3ce8488f49e98a97af54f2b1665fe4c2
+  NativePackageItems:
+    []

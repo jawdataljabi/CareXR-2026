@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    3bf9a253-3da6-440d-8cb6-3d7eec88e3ba: 56150916-967b-6fd5-92d8-5b163eef7a0c/3a22b24d67832e631487e7d412a47697/Data/face3.mesh
+  Assets:
+    - !<FileMesh/3bf9a253-3da6-440d-8cb6-3d7eec88e3ba>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 1264
+        Vertices: 1120
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 13.313894, y: 4.746592, z: 1.102242}
+  SourceHash: 3a22b24d67832e631487e7d412a47697
+  FileHash: 7778225afa78e9fd1e0629eaf4b78641
+  NativePackageItems:
+    []

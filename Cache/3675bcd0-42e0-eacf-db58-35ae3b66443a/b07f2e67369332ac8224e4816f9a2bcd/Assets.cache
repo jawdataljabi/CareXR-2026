@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    4af4240c-83ec-41f2-ace9-bc3ed0dc4c1f: 3675bcd0-42e0-eacf-db58-35ae3b66443a/b07f2e67369332ac8224e4816f9a2bcd/Data/bl1.jpg
+  Assets:
+    - !<FileTexture/4af4240c-83ec-41f2-ace9-bc3ed0dc4c1f>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 1
+        Height: 1
+  SourceHash: b07f2e67369332ac8224e4816f9a2bcd
+  FileHash: f05a20544e4b21caf40936ed92ee1f0a
+  NativePackageItems:
+    []

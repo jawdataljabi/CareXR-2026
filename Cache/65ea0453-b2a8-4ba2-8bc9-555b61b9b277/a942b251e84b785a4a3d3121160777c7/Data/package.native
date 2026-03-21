@@ -1,0 +1,20 @@
+- !<NativePackageDescriptor/1771938e-8632-4649-a1e9-687693b43af2>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 15
+    patch: 1
+    build: 25102815
+    type: Unset
+  Description: Three glasses assets
+  SvgIcon: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 76
+  ExportUid: 5f7ce27a-02ba-4f07-83bf-d87df2aa4ecb
+  ComponentUid: a2730e33-4cb9-431c-887e-4fde774104d8
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpackedTransparent
+  coreVersion: 330
+  clientVersion: 13.6000004

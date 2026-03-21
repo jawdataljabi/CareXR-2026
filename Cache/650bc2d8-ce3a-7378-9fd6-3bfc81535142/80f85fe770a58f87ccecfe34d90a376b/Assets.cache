@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    ad9cd306-161a-4740-bdcc-79ed87e46377: 650bc2d8-ce3a-7378-9fd6-3bfc81535142/80f85fe770a58f87ccecfe34d90a376b/Data/lenses.mesh
+  Assets:
+    - !<FileMesh/ad9cd306-161a-4740-bdcc-79ed87e46377>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 278
+        Vertices: 168
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 13.470789, y: 5.143387, z: 1.041038}
+  SourceHash: 80f85fe770a58f87ccecfe34d90a376b
+  FileHash: 80675285cbe05fc181bb913fe0908307
+  NativePackageItems:
+    []

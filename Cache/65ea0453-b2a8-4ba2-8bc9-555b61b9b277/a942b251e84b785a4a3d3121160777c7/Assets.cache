@@ -1,0 +1,1579 @@
+- !<AssetCache>
+  AssetFiles:
+    {}
+  Assets:
+    []
+  SourceHash: a942b251e84b785a4a3d3121160777c7
+  FileHash: 69af0cffa08753b29a74a0ec3a75a64e
+  NativePackageItems:
+    - !<own> 6ca5fd41-de6a-7f55-1708-0fbd8c7d89f9
+    - !<own> 3f6f1e42-7b54-52a4-85b5-5ab93b33d1a6
+    - !<own> fbd498b4-970b-05e6-b279-91a3d75d2ad5
+    - !<own> 8f2e5262-4fe6-8389-e63b-bcc8e93950b9
+    - !<own> 388331c1-fa67-ae60-3bc3-2bf2bdf6fc36
+    - !<own> 711e44d0-0450-ba52-c1d9-e21714015780
+    - !<own> 4f5a125a-adbb-956a-1993-dfdcc8d1dc6f
+    - !<own> 1168c6d1-dbc0-cf31-f159-c260db697368
+    - !<own> e28b939c-bfc4-f94e-3bdf-ce70605ec33f
+    - !<own> a6010ae0-36c9-545a-e63a-0b7af47c104b
+    - !<own> 3d2f99dd-78f6-f11b-54a3-4bba2906e623
+    - !<own> c611aaba-ecfc-d069-b9c2-c33e6c46ef84
+    - !<own> 8a4cb5a8-09b1-8e62-3cc4-d4bacaded944
+    - !<own> eba2b8f6-dabd-bb75-a05a-45b206a445a0
+    - !<own> 650bc2d8-ce3a-7378-9fd6-3bfc81535142
+    - !<own> 41f0b5a9-65e6-f35c-d535-a0bf8dc54eeb
+    - !<own> 2a3e49d7-e014-982f-3e47-9580912e4a59
+    - !<own> cf570291-41f4-0e82-3688-9f69487c91e2
+    - !<own> 56150916-967b-6fd5-92d8-5b163eef7a0c
+    - !<own> 22851a0c-573a-28e1-4785-a7ee744282a7
+    - !<own> 45f247ef-1164-cf59-ca9d-c57ad2e0967a
+    - !<own> 73bf7a24-f06a-4dae-1bf7-d12f39a5a148
+    - !<own> cff299b8-b646-fae4-fa74-1d09672731d3
+    - !<own> 4f02cca0-effc-26b6-c0d1-61c67fc9d725
+    - !<own> b7e1da0a-e32c-7170-8752-bc3ad151ce51
+    - !<own> b270c7c6-29a3-84ee-d77d-4feecc909023
+    - !<own> 15f16dbe-41c9-a6bd-a319-8a01d384b42c
+    - !<own> 41b27c88-a64b-6672-61b0-fe2382e0a65a
+    - !<own> 3675bcd0-42e0-eacf-db58-35ae3b66443a
+    - !<own> 28b70256-2e2e-6f1a-353a-a6b1027c1edc
+    - !<own> 1a34b8e9-79b5-45fd-8507-65ebaf221c78
+    - !<own> 2bdee3c1-ce04-71e7-e94c-89a1534cdf67
+    - !<own> e1493dac-ded0-c06a-4e3d-c613e49e7226
+    - !<own> f8c34493-0ed7-f8ba-f9af-c6df76c6bd6a
+    - !<own> a5c7e62c-f2b6-b8f6-3892-13cefed83ee0
+    - !<own> 94ea38d4-c91b-d885-1b6f-f86cb220267f
+    - !<own> 0d3c71b2-73b2-e69d-8106-b592fea1b87a
+    - !<own> 26e84cfd-31fc-5e54-067c-d769f6bb5c07
+    - !<own> 852775bc-8151-95d0-0acf-8c77b2eee9c6
+    - !<own> 2eb5b0ba-1ee6-5293-f53a-6b922dfda13a
+    - !<own> 18db99e1-6e6c-ca19-e0c2-dc0aec48b8a6
+    - !<own> 39b080cb-5f0a-42e1-f9e2-a66d0507ef61
+- !<SceneObject/00c070f4-cca8-4b01-5d96-11f6055ee1dc>
+  PrefabRemaps:
+    []
+  Name: Rim_oprava
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 142f6c34-9beb-442b-4044-03bcfcc99a5f
+- !<SceneObject/02f84782-540a-4a57-5cbc-c369e3e1fdab>
+  PrefabRemaps:
+    []
+  Name: Head Occluder
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b8c90adc-c23c-417e-40e0-68c8df8fe0e7
+  Components:
+    []
+- !<RenderMeshVisual/0d28fcb7-2a93-402e-69bf-b31dfd5c224a>
+  PrefabRemaps:
+    []
+  Name: component_3
+  Enabled: true
+  RenderOrder: 15
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> e860a0aa-f417-4224-ad21-070e9fa6ed4c
+  Mesh: !<reference> aa8f8144-1089-4692-93fa-b3e3c42f1eed
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/0d3c71b2-73b2-e69d-8106-b592fea1b87a>
+  ImportedAssetIds:
+    Texture: !<reference> 58fece38-b8a3-4ea7-ba4c-13117acd33f3
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 58fece38-b8a3-4ea7-ba4c-13117acd33f3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/1168c6d1-dbc0-cf31-f159-c260db697368>
+  ImportedAssetIds:
+    Material: !<reference> 713b560a-da32-4298-a7f1-bead41972fe7
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 713b560a-da32-4298-a7f1-bead41972fe7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/13db8d19-4b2c-426c-798e-6563fc001c45>
+  PrefabRemaps:
+    []
+  Name: "Lighting [DISABLE_DEFAULT_ENVMAP)"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2ab453b5-3b15-4efc-7c2f-ae19850d185a
+  Components:
+    []
+- !<RenderMeshVisual/142f6c34-9beb-442b-4044-03bcfcc99a5f>
+  PrefabRemaps:
+    []
+  Name: component_5
+  Enabled: true
+  RenderOrder: 15
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b5973ec4-efe3-48cf-b04b-9416b464135e
+  Mesh: !<reference> 3bf9a253-3da6-440d-8cb6-3d7eec88e3ba
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/1563c769-1aea-4c53-53ff-85819144ac48>
+  PrefabRemaps:
+    []
+  Name: Gold_1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.300256}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> bfda45f3-72a9-4ae2-42a5-50e65e2d3d3e
+- !<AssetImportMetadata/15f16dbe-41c9-a6bd-a319-8a01d384b42c>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 28f4cd47-0af1-4474-a97b-12eb857e940d
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 28f4cd47-0af1-4474-a97b-12eb857e940d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/18db99e1-6e6c-ca19-e0c2-dc0aec48b8a6>
+  ImportedAssetIds:
+    Texture: !<reference> d0894253-da17-4a81-92c6-57a8cafb6114
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> d0894253-da17-4a81-92c6-57a8cafb6114
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/1a34b8e9-79b5-45fd-8507-65ebaf221c78>
+  ImportedAssetIds:
+    Texture: !<reference> 59e9a828-3f78-4e60-a40b-96f9b35fc6cd
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 59e9a828-3f78-4e60-a40b-96f9b35fc6cd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/22851a0c-573a-28e1-4785-a7ee744282a7>
+  ImportedAssetIds:
+    FileMesh: !<reference> 5beaf713-afae-4984-b460-b2504e25c136
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 5beaf713-afae-4984-b460-b2504e25c136
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/26e84cfd-31fc-5e54-067c-d769f6bb5c07>
+  ImportedAssetIds:
+    Texture: !<reference> 40e040f8-9454-45a7-8f51-66542ad6e38c
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 40e040f8-9454-45a7-8f51-66542ad6e38c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/28b70256-2e2e-6f1a-353a-a6b1027c1edc>
+  ImportedAssetIds:
+    Texture: !<reference> a88b98ae-47e9-42b9-8369-0f100aab9a4d
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> a88b98ae-47e9-42b9-8369-0f100aab9a4d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/2a3e49d7-e014-982f-3e47-9580912e4a59>
+  ImportedAssetIds:
+    FileMesh: !<reference> de5ec5f2-3910-4253-8235-2bc50c8398b7
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> de5ec5f2-3910-4253-8235-2bc50c8398b7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/2ab453b5-3b15-4efc-7c2f-ae19850d185a>
+  PrefabRemaps:
+    []
+  Name: Envmap
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 60.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 74a2486d-be71-46c6-4961-790319a1f85f
+- !<AssetImportMetadata/2bdee3c1-ce04-71e7-e94c-89a1534cdf67>
+  ImportedAssetIds:
+    Texture: !<reference> 87d81450-9aca-484c-85c0-6cdae77d5c96
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 87d81450-9aca-484c-85c0-6cdae77d5c96
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/2eb5b0ba-1ee6-5293-f53a-6b922dfda13a>
+  ImportedAssetIds:
+    Texture: !<reference> 278aa89a-eca7-40c1-bbf8-94a107cbe82a
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 278aa89a-eca7-40c1-bbf8-94a107cbe82a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/3675bcd0-42e0-eacf-db58-35ae3b66443a>
+  ImportedAssetIds:
+    Texture: !<reference> 4af4240c-83ec-41f2-ace9-bc3ed0dc4c1f
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 4af4240c-83ec-41f2-ace9-bc3ed0dc4c1f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/388331c1-fa67-ae60-3bc3-2bf2bdf6fc36>
+  ImportedAssetIds:
+    Material: !<reference> 7713c57d-a921-4a05-a2fb-dfa51acee3c1
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 7713c57d-a921-4a05-a2fb-dfa51acee3c1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/39b080cb-5f0a-42e1-f9e2-a66d0507ef61>
+  ImportedAssetIds:
+    Texture: !<reference> 3fc06a3d-bae6-448c-89b9-44c14d910754
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 3fc06a3d-bae6-448c-89b9-44c14d910754
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/3d2f99dd-78f6-f11b-54a3-4bba2906e623>
+  ImportedAssetIds:
+    FileMesh: !<reference> 9fc1bd3d-a0c2-4708-b1ca-c0785e31f203
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 9fc1bd3d-a0c2-4708-b1ca-c0785e31f203
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/3f6f1e42-7b54-52a4-85b5-5ab93b33d1a6>
+  ImportedAssetIds:
+    Material: !<reference> e860a0aa-f417-4224-ad21-070e9fa6ed4c
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> e860a0aa-f417-4224-ad21-070e9fa6ed4c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/4079efc5-9d74-4392-403e-be51360b9fcb>
+  PrefabRemaps:
+    []
+  Name: component_3
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8e03d104-4758-441d-9e46-313504e051c3
+  Mesh: !<reference> 9fc1bd3d-a0c2-4708-b1ca-c0785e31f203
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/41b27c88-a64b-6672-61b0-fe2382e0a65a>
+  ImportedAssetIds:
+    Pass: !<reference> 0a0b91d7-950e-4481-8936-836d57a0f41d
+    ui: !<reference> 4dade2b7-81f2-4c99-96b5-9e2165e1aaa7
+  ImporterName: PassImporter
+  PrimaryAsset: !<reference> 0a0b91d7-950e-4481-8936-836d57a0f41d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    - includes/blend_modes.glsl
+    - includes/blend_modes_eyecolor.glsl
+    - includes/debug.glsl
+    - includes/envmap.glsl
+    - includes/fizzle.glsl
+    - includes/importance_sampling.glsl
+    - includes/pbr.glsl
+    - includes/rgbhsl.glsl
+    - includes/spherical_harmonics.glsl
+    - includes/uber_debug.glsl
+    - includes/uber_lighting.glsl
+    - includes/uber_surface_properties.glsl
+    - includes/utils.glsl
+    - uber.ui
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/41f0b5a9-65e6-f35c-d535-a0bf8dc54eeb>
+  ImportedAssetIds:
+    FileMesh: !<reference> 51a1e9fb-e4c9-4b53-8585-f99706f962ca
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 51a1e9fb-e4c9-4b53-8585-f99706f962ca
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<Head/41f1f3dc-1b2f-496e-4ceb-7adaedc7185b>
+  PrefabRemaps:
+    []
+  Name: Head
+  Enabled: true
+  AttachmentPointType: HeadCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 0
+      - 0
+      - 0
+    weights:
+      - 0.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/45f247ef-1164-cf59-ca9d-c57ad2e0967a>
+  ImportedAssetIds:
+    FileMesh: !<reference> ccf7a947-44cb-4399-9ff8-4afb10e4f2a1
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> ccf7a947-44cb-4399-9ff8-4afb10e4f2a1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/4abcbc8b-b8c4-422f-6773-4b1086f4645f>
+  PrefabRemaps:
+    []
+  Name: Glasses_Pack_2__PUT_UNDER_MAIN_CAM
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9f41ca76-4607-4b1d-6374-6cdbb2bc38f4
+    - !<own> 13db8d19-4b2c-426c-798e-6563fc001c45
+  Components:
+    []
+- !<AssetImportMetadata/4f02cca0-effc-26b6-c0d1-61c67fc9d725>
+  ImportedAssetIds:
+    FileMesh: !<reference> aa8f8144-1089-4692-93fa-b3e3c42f1eed
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> aa8f8144-1089-4692-93fa-b3e3c42f1eed
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/4f5a125a-adbb-956a-1993-dfdcc8d1dc6f>
+  ImportedAssetIds:
+    Material: !<reference> 8dbb695f-2f8e-47d1-876a-532d445435c4
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 8dbb695f-2f8e-47d1-876a-532d445435c4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/55632945-e9af-494c-7c8c-1e152f3864e7>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7eb9e7b9-0800-454e-a02a-5e1368d46ca7
+  Mesh: !<reference> ad9cd306-161a-4740-bdcc-79ed87e46377
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/56150916-967b-6fd5-92d8-5b163eef7a0c>
+  ImportedAssetIds:
+    FileMesh: !<reference> 3bf9a253-3da6-440d-8cb6-3d7eec88e3ba
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 3bf9a253-3da6-440d-8cb6-3d7eec88e3ba
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/628497d0-4e3a-4468-5cf6-6b96d8571b5c>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7713c57d-a921-4a05-a2fb-dfa51acee3c1
+  Mesh: !<reference> 48287427-d959-44da-b348-e0090ac4f355
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/650bc2d8-ce3a-7378-9fd6-3bfc81535142>
+  ImportedAssetIds:
+    FileMesh: !<reference> ad9cd306-161a-4740-bdcc-79ed87e46377
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> ad9cd306-161a-4740-bdcc-79ed87e46377
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/69f43614-7942-464a-8ba5-af34d54fbf0b>
+  Prototype: !<ObjectOwner/c1df4184-622c-45eb-9892-078e11bc18a4>
+    PackagePath: ""
+    objects:
+      - !<own> 4abcbc8b-b8c4-422f-6773-4b1086f4645f
+- !<RenderMeshVisual/6b0a890f-192a-4780-7ccf-103727ebbb8c>
+  PrefabRemaps:
+    []
+  Name: component_4
+  Enabled: true
+  RenderOrder: 15
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> e860a0aa-f417-4224-ad21-070e9fa6ed4c
+  Mesh: !<reference> fb0bf918-1d5d-48f9-913c-ebd4b82281bd
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/6ca5fd41-de6a-7f55-1708-0fbd8c7d89f9>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 542d7543-0356-43ff-99ce-4402f5efa409
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 542d7543-0356-43ff-99ce-4402f5efa409
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 69f43614-7942-464a-8ba5-af34d54fbf0b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/711e44d0-0450-ba52-c1d9-e21714015780>
+  ImportedAssetIds:
+    Material: !<reference> 8e03d104-4758-441d-9e46-313504e051c3
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 8e03d104-4758-441d-9e46-313504e051c3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/7393c4e1-5de3-4809-589c-9c7c2ffdaedb>
+  PrefabRemaps:
+    []
+  Name: Glass_1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -0.108979}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6b0a890f-192a-4780-7ccf-103727ebbb8c
+- !<AssetImportMetadata/73bf7a24-f06a-4dae-1bf7-d12f39a5a148>
+  ImportedAssetIds:
+    FileMesh: !<reference> d3da95ed-457f-4eb0-9818-5e13127c2f58
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> d3da95ed-457f-4eb0-9818-5e13127c2f58
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<LightSource/74a2486d-be71-46c6-4961-790319a1f85f>
+  PrefabRemaps:
+    []
+  Name: Light source
+  Enabled: true
+  renderLayer: 1
+  LightType: EnvMap
+  Intensity: 0.000000
+  CastShadows: false
+  ShadowDensity: 1.000000
+  ShadowBlurRadius: 4.000000
+  ShadowTextureSize: 512
+  AutoLightSourcePosition: true
+  AutoShadowFrustumSize: true
+  AutoShadowFrustumSizeExtend: 2.000000
+  ShadowFrustumSize: 100.000000
+  ShadowFrustumNearClipPlane: 1.000000
+  ShadowFrustumFarClipPlane: 1000.000000
+  UseEnvMapFromCamera: false
+  EnvMapFromCameraMode: Auto
+  EstimationSharpness: 1.000000
+  EnvMapExposure: 0.900000
+  EnvMapRotation: 190.449997
+  DiffuseEnvTexture: !<reference> 58fece38-b8a3-4ea7-ba4c-13117acd33f3
+  SpecularEnvTexture: !<reference> 40e040f8-9454-45a7-8f51-66542ad6e38c
+  Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+  DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  InnerConeAngle: 0.000000
+  OuterConeAngle: 45.000000
+  DecayType: None
+  DecayLimit: false
+  DecayRange: 1.000000
+- !<SceneObject/821bbb0c-8d86-429d-5977-de00437a7f62>
+  PrefabRemaps:
+    []
+  Name: frame
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.153900, y: 9.471720, z: -0.355261}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ff7f0290-a39c-425d-4649-ff914f62d322
+- !<SceneObject/83faaa6b-e091-4211-49b4-d4cfa2145e3b>
+  PrefabRemaps:
+    []
+  Name: wishbones
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.153900, y: 9.471720, z: -0.355261}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 628497d0-4e3a-4468-5cf6-6b96d8571b5c
+- !<SceneObject/8435bd49-7f6b-4518-6b57-1b369455b494>
+  PrefabRemaps:
+    []
+  Name: Gold
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.882654, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ac604891-d798-45a9-6a71-2dadf24f23b6
+- !<SceneObject/84bf1dca-f504-43f5-449f-3266866fba3b>
+  PrefabRemaps:
+    []
+  Name: glasses
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.153900, y: 9.471720, z: -0.355261}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4079efc5-9d74-4392-403e-be51360b9fcb
+- !<AssetImportMetadata/852775bc-8151-95d0-0acf-8c77b2eee9c6>
+  ImportedAssetIds:
+    Texture: !<reference> 22228119-14df-4196-b3d6-f17ff60021ec
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 22228119-14df-4196-b3d6-f17ff60021ec
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/8a4cb5a8-09b1-8e62-3cc4-d4bacaded944>
+  ImportedAssetIds:
+    FileMesh: !<reference> 48287427-d959-44da-b348-e0090ac4f355
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 48287427-d959-44da-b348-e0090ac4f355
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+      texture1: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/8f2e5262-4fe6-8389-e63b-bcc8e93950b9>
+  ImportedAssetIds:
+    Material: !<reference> b5973ec4-efe3-48cf-b04b-9416b464135e
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> b5973ec4-efe3-48cf-b04b-9416b464135e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/8fd87a69-df7d-45f2-761b-d83e75f28591>
+  PrefabRemaps:
+    []
+  Name: mosepads
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.468098, z: 1.468318}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.910000, y: 0.910000, z: 0.910000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b21c4569-4576-4a47-5cbf-c510004c48a4
+- !<AssetImportMetadata/94ea38d4-c91b-d885-1b6f-f86cb220267f>
+  ImportedAssetIds:
+    Texture: !<reference> 1da0f69c-2c3b-4f0f-9478-57b67e103c57
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 1da0f69c-2c3b-4f0f-9478-57b67e103c57
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/9f41ca76-4607-4b1d-6374-6cdbb2bc38f4>
+  PrefabRemaps:
+    []
+  Name: Head_0
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.050153, y: -7.902884, z: -9.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 02f84782-540a-4a57-5cbc-c369e3e1fdab
+    - !<own> e6c6341f-e471-456e-7176-74d59d646cb5
+    - !<own> abb488ed-5970-4991-6f08-68b8c9138efc
+    - !<own> cd1c12eb-16f0-4f25-6688-8b9996da3601
+  Components:
+    - !<own> 41f1f3dc-1b2f-496e-4ceb-7adaedc7185b
+- !<AssetImportMetadata/a5c7e62c-f2b6-b8f6-3892-13cefed83ee0>
+  ImportedAssetIds:
+    Texture: !<reference> e0ca31dc-f0dd-4994-b36b-c06c14deedab
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> e0ca31dc-f0dd-4994-b36b-c06c14deedab
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/a6010ae0-36c9-545a-e63a-0b7af47c104b>
+  ImportedAssetIds:
+    FileMesh: !<reference> 49af1702-1a80-4e83-b48f-baf2ec16b91f
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 49af1702-1a80-4e83-b48f-baf2ec16b91f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+      texture1: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/abb488ed-5970-4991-6f08-68b8c9138efc>
+  PrefabRemaps:
+    []
+  Name: Sunglasses 2
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.102178, y: 8.232524, z: 8.407766}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> dadf481f-dd77-4b3e-60e4-a6a4dbd5fe2f
+    - !<own> d990613f-2a51-46c1-6834-dff35d4f8451
+    - !<own> 8fd87a69-df7d-45f2-761b-d83e75f28591
+    - !<own> abb4b34c-b44f-4ef0-5b86-c090895971f0
+  Components:
+    []
+- !<SceneObject/abb4b34c-b44f-4ef0-5b86-c090895971f0>
+  PrefabRemaps:
+    []
+  Name: nose
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.917134, z: 2.113091}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c5104474-edbb-48fd-497a-8dc470800eef
+- !<RenderMeshVisual/ac604891-d798-45a9-6a71-2dadf24f23b6>
+  PrefabRemaps:
+    []
+  Name: component_8
+  Enabled: true
+  RenderOrder: 15
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2975d8ac-0c0c-46b8-aaf7-ccd49a38c1a6
+  Mesh: !<reference> d3da95ed-457f-4eb0-9818-5e13127c2f58
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/b21c4569-4576-4a47-5cbf-c510004c48a4>
+  PrefabRemaps:
+    []
+  Name: component_3
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 713b560a-da32-4298-a7f1-bead41972fe7
+  Mesh: !<reference> 51a1e9fb-e4c9-4b53-8585-f99706f962ca
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/b270c7c6-29a3-84ee-d77d-4feecc909023>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 59ef7a63-300b-4fa6-9bcc-f81d1aa09c54
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 59ef7a63-300b-4fa6-9bcc-f81d1aa09c54
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/b7e1da0a-e32c-7170-8752-bc3ad151ce51>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> 1771938e-8632-4649-a1e9-687693b43af2
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> 1771938e-8632-4649-a1e9-687693b43af2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/b8c90adc-c23c-417e-40e0-68c8df8fe0e7>
+  PrefabRemaps:
+    []
+  Name: msh_mask_head
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.051300, y: 7.210131, z: 1.032727}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.100000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fc7b1a1a-c48c-4373-4f85-fbda1dcc8461
+- !<RenderMeshVisual/bfda45f3-72a9-4ae2-42a5-50e65e2d3d3e>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  RenderOrder: 15
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2975d8ac-0c0c-46b8-aaf7-ccd49a38c1a6
+  Mesh: !<reference> ccf7a947-44cb-4399-9ff8-4afb10e4f2a1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/c5104474-edbb-48fd-497a-8dc470800eef>
+  PrefabRemaps:
+    []
+  Name: component_4
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8dbb695f-2f8e-47d1-876a-532d445435c4
+  Mesh: !<reference> de5ec5f2-3910-4253-8235-2bc50c8398b7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/c611aaba-ecfc-d069-b9c2-c33e6c46ef84>
+  ImportedAssetIds:
+    FileMesh: !<reference> 692a5afb-097d-4154-aea7-dcb55eec2ba3
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 692a5afb-097d-4154-aea7-dcb55eec2ba3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/cd1c12eb-16f0-4f25-6688-8b9996da3601>
+  PrefabRemaps:
+    []
+  Name: Glasses 3
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.102647, y: 8.021887, z: 9.324400}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.100652, y: 1.100652, z: 1.100652}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 00c070f4-cca8-4b01-5d96-11f6055ee1dc
+    - !<own> 8435bd49-7f6b-4518-6b57-1b369455b494
+    - !<own> f99b8225-cdfd-415d-7a24-c1a02df70a37
+    - !<own> e9abea2e-123e-4875-780f-f0d0a197f66e
+    - !<own> 1563c769-1aea-4c53-53ff-85819144ac48
+    - !<own> ee3d9e90-f97e-4446-471c-72dc57f7fb2d
+    - !<own> 7393c4e1-5de3-4809-589c-9c7c2ffdaedb
+  Components:
+    []
+- !<AssetImportMetadata/cf570291-41f4-0e82-3688-9f69487c91e2>
+  ImportedAssetIds:
+    FileMesh: !<reference> dca98a29-8041-4103-b0fb-9e6e28dd6101
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> dca98a29-8041-4103-b0fb-9e6e28dd6101
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/cff299b8-b646-fae4-fa74-1d09672731d3>
+  ImportedAssetIds:
+    FileMesh: !<reference> fb0bf918-1d5d-48f9-913c-ebd4b82281bd
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> fb0bf918-1d5d-48f9-913c-ebd4b82281bd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/d990613f-2a51-46c1-6834-dff35d4f8451>
+  PrefabRemaps:
+    []
+  Name: lenses
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.000000, y: -0.299808, z: -3.808515}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.910000, y: 0.910000, z: 0.910000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 55632945-e9af-494c-7c8c-1e152f3864e7
+- !<SceneObject/dadf481f-dd77-4b3e-60e4-a6a4dbd5fe2f>
+  PrefabRemaps:
+    []
+  Name: frame
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.000000, y: -0.299808, z: -3.808515}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.910000, y: 0.910000, z: 0.910000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e0ef251f-e3d1-4c0d-7d94-7afb806ae15f
+- !<RenderMeshVisual/e0ef251f-e3d1-4c0d-7d94-7afb806ae15f>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 713b560a-da32-4298-a7f1-bead41972fe7
+  Mesh: !<reference> 18a1fe07-21e5-4552-a9a8-15feffa12b89
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AssetImportMetadata/e1493dac-ded0-c06a-4e3d-c613e49e7226>
+  ImportedAssetIds:
+    Texture: !<reference> afb2bcd0-6a57-41ef-b743-bed1508e0226
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> afb2bcd0-6a57-41ef-b743-bed1508e0226
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/e28b939c-bfc4-f94e-3bdf-ce70605ec33f>
+  ImportedAssetIds:
+    Material: !<reference> 7eb9e7b9-0800-454e-a02a-5e1368d46ca7
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 7eb9e7b9-0800-454e-a02a-5e1368d46ca7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/e6c6341f-e471-456e-7176-74d59d646cb5>
+  PrefabRemaps:
+    []
+  Name: Sunglasses 1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 83faaa6b-e091-4211-49b4-d4cfa2145e3b
+    - !<own> 84bf1dca-f504-43f5-449f-3266866fba3b
+    - !<own> 821bbb0c-8d86-429d-5977-de00437a7f62
+  Components:
+    []
+- !<RenderMeshVisual/e87a4a1e-43d9-4576-456b-388de77ae5a7>
+  PrefabRemaps:
+    []
+  Name: component_7
+  Enabled: true
+  RenderOrder: 14
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b5973ec4-efe3-48cf-b04b-9416b464135e
+  Mesh: !<reference> 5beaf713-afae-4984-b460-b2504e25c136
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/e9abea2e-123e-4875-780f-f0d0a197f66e>
+  PrefabRemaps:
+    []
+  Name: Oprava
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fcdd3d4c-4788-4359-70b7-a5b99803ee02
+- !<AssetImportMetadata/eba2b8f6-dabd-bb75-a05a-45b206a445a0>
+  ImportedAssetIds:
+    FileMesh: !<reference> 18a1fe07-21e5-4552-a9a8-15feffa12b89
+  ImporterName: FileMeshImporter
+  PrimaryAsset: !<reference> 18a1fe07-21e5-4552-a9a8-15feffa12b89
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<FileMeshImporterSettings>
+    ModifiedVertexFormats:
+      normal: Float
+      position: Float
+      tangent: Float
+      texture0: Float
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/ee3d9e90-f97e-4446-471c-72dc57f7fb2d>
+  PrefabRemaps:
+    []
+  Name: Glass
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -0.108979}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0d28fcb7-2a93-402e-69bf-b31dfd5c224a
+- !<AssetImportMetadata/f8c34493-0ed7-f8ba-f9af-c6df76c6bd6a>
+  ImportedAssetIds:
+    Texture: !<reference> 849d0f9d-7e19-4f22-8e73-bfd466f890e6
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 849d0f9d-7e19-4f22-8e73-bfd466f890e6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/f99b8225-cdfd-415d-7a24-c1a02df70a37>
+  PrefabRemaps:
+    []
+  Name: Dushki
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e87a4a1e-43d9-4576-456b-388de77ae5a7
+- !<AssetImportMetadata/fbd498b4-970b-05e6-b279-91a3d75d2ad5>
+  ImportedAssetIds:
+    Material: !<reference> 2975d8ac-0c0c-46b8-aaf7-ccd49a38c1a6
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 2975d8ac-0c0c-46b8-aaf7-ccd49a38c1a6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/fc7b1a1a-c48c-4373-4f85-fbda1dcc8461>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8dbb695f-2f8e-47d1-876a-532d445435c4
+  Mesh: !<reference> 692a5afb-097d-4154-aea7-dcb55eec2ba3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/fcdd3d4c-4788-4359-70b7-a5b99803ee02>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 16
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b5973ec4-efe3-48cf-b04b-9416b464135e
+  Mesh: !<reference> dca98a29-8041-4103-b0fb-9e6e28dd6101
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/ff7f0290-a39c-425d-4649-ff914f62d322>
+  PrefabRemaps:
+    []
+  Name: component_4
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7713c57d-a921-4a05-a2fb-dfa51acee3c1
+  Mesh: !<reference> 49af1702-1a80-4e83-b48f-baf2ec16b91f
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

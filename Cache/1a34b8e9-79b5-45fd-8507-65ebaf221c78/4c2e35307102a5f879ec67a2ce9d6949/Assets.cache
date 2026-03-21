@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    59e9a828-3f78-4e60-a40b-96f9b35fc6cd: 1a34b8e9-79b5-45fd-8507-65ebaf221c78/4c2e35307102a5f879ec67a2ce9d6949/Data/glass_refl.jpg
+  Assets:
+    - !<FileTexture/59e9a828-3f78-4e60-a40b-96f9b35fc6cd>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 256
+        Height: 256
+  SourceHash: 4c2e35307102a5f879ec67a2ce9d6949
+  FileHash: 6b407ccd8a4fb0927a05dd93564cc4ea
+  NativePackageItems:
+    []

@@ -1,0 +1,10 @@
+- !<AssetCache>
+  AssetFiles:
+    88760f4b-53f5-4154-8c91-545cb603b255: 7368f56d-eccb-4902-844e-7f64c5d7bf6c/27ca7b5d36f36f55fbcc6b7ccd59c9c0/Data/ToolGetDefinition.json
+  Assets:
+    - !<JsonAsset/88760f4b-53f5-4154-8c91-545cb603b255>
+      PackagePath: ""
+  SourceHash: 27ca7b5d36f36f55fbcc6b7ccd59c9c0
+  FileHash: 85b140903b4d23ec6734ca1020a12690
+  NativePackageItems:
+    []
