@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/a0cb2300-b874-4964-b2ad-94df25cd1741>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> d76ff122-5ba2-4314-90f7-14be3f5a216a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> d76ff122-5ba2-4314-90f7-14be3f5a216a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 864668fb-90ac-4c80-9300-863dddd5bddf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/864668fb-90ac-4c80-9300-863dddd5bddf>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 78770b13-0d65-4241-8688-62450aa0ef69
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    emotionText: false
+    emotionThreshold: false
+    faceMeshVisual: false
+    hysteresis: false
+    smoothingFactor: false
+    updateInterval: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - faceMeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      emotionText: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      updateInterval: 0.150000
+      emotionThreshold: 0.250000
+      smoothingFactor: 0.300000
+      hysteresis: 0.080000
+  ScriptTypes:
+    -
+      {}

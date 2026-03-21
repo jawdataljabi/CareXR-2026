@@ -11,6 +11,8 @@ dock:
           - items:
               - persistentName: Snap.Plugin.Gui.AssetBrowser
                 Uuid: cd11ace2-8507-4965-a068-d85c26031a6b
+              - persistentName: Snap.Plugin.Gui.SpectaclesMonitorPanel
+                Uuid: 7731d504-7535-421a-801e-ff9407f08e87
             type: section
             current: 0
         sizes:
@@ -25,15 +27,15 @@ dock:
               - persistentName: Snap.Plugin.AssistantAI.Panel
                 Uuid: df91b2cf-37e1-401c-83fc-3d9f83343e71
             type: section
-            current: 1
+            current: 0
           - items:
               - persistentName: Snap.Plugin.Gui.LoggerPanel
                 Uuid: 81de965d-0c94-4d28-82cf-901740003a1f
             type: section
             current: 0
         sizes:
-          - 806
-          - 162
+          - 617
+          - 351
         type: splitter
         orientation: vertical
       - items:

@@ -1,10 +1,10 @@
 backCameraMultimedia:
   type: string
-  value: PreviewResources.bundle/Video/World/Beach.mp4
+  value: PreviewResources.bundle/Video/Raise Eyebrows/Raise Eyebrows Person 3.mp4
   options: 4
 cameraType:
   type: int
-  value: 0
+  value: 1
   options: 4
 deviceType:
   type: string
@@ -40,7 +40,7 @@ mirrorHorizontally:
   options: 4
 previewSource:
   type: string
-  value: PreviewResources.bundle/Video/Idle/Idle.mp4
+  value: PreviewResources.bundle/Video/Raise Eyebrows/Raise Eyebrows Person 3.mp4
   options: 4
 previewTarget:
   type: int

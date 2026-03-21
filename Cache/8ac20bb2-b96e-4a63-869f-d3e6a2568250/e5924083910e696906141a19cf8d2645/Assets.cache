@@ -1484,11 +1484,14 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: 8ac20bb2-b96e-4a63-869f-d3e6a2568250/e5924083910e696906141a19cf8d2645/Data/bf73d32/icon_mat.glsl
+      ShaderPath: 8ac20bb2-b96e-4a63-869f-d3e6a2568250/e5924083910e696906141a19cf8d2645/Data/24936a5/icon_mat.glsl
       Defines:
         []
       Properties:
         {}
+      ReferencedAssets:
+        []
+      GraphStatus: Evaluated
   SourceHash: e5924083910e696906141a19cf8d2645
   FileHash: 4746c07aa269f057316d0686dbea7f2c
   NativePackageItems:

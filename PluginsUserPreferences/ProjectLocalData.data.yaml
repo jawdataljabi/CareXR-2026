@@ -1,3 +1,6 @@
 data:
   externalSources:
-    []
+    - 529f1c2d-cf6d-4b60-a605-35d5c7bdc34e: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/FaceMeshMaterial/Resources/FaceMeshTexture.jpg"
+    - 5b264890-06ce-41ac-92a2-d66c6539bb7f: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/Text3DMaterial/Resources/text_3d.ss_graph"
+    - a136234b-1ec3-44ca-bf9a-1e92ffcfc34a: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/FaceMeshMaterial/Resources/face_mesh.ss_graph"
+    - c2feb013-3000-46b6-9cef-6c578717e9ec: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/Resources/Base.png"

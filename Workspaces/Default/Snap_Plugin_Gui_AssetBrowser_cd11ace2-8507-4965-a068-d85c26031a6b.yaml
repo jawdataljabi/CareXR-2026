@@ -1,8 +1,13 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 57
+    size: 65
     values:
+      - Base.png
+      - EmotionDetector.js
+      - Face Mesh.facemesh
+      - Face Mesh.mat
+      - FaceMeshTexture.jpg
       - Glasses Pack 2.lspkg
       - Glasses Pack 2.lspkg/Glasses_Pack_2__PUT_UNDER_MAIN_CAM.prefab
       - Glasses Pack 2.lspkg/Materials
@@ -60,4 +65,7 @@ CollapsedEntities:
       - Glasses Pack 2.lspkg/Textures/reflection_4.jpg
       - Glasses Pack 2.lspkg/Textures/shadow.jpg
       - Glasses Pack 2.lspkg/package.native
+      - Text3D.mat
+      - face_mesh.ss_graph
+      - text_3d.ss_graph
   options: 4
