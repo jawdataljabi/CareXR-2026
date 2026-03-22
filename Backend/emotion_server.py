@@ -142,9 +142,13 @@ def _set_name_tag(name):
         _name_tag = name
 
 
-def _get_name_tag():
+def _consume_name_tag():
+    """Return the name tag and clear it (one-shot delivery, Lens persists it)."""
+    global _name_tag
     with _state_lock:
-        return _name_tag
+        tag = _name_tag
+        _name_tag = ""
+        return tag
 
 
 def _extract_name(transcript):
@@ -447,7 +451,7 @@ def analyze():
         if hint:
             resp_data["follow_up_hint"] = hint
 
-        name_tag = _get_name_tag()
+        name_tag = _consume_name_tag()
         if name_tag:
             resp_data["name_tag"] = name_tag
 
