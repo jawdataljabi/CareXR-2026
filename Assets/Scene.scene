@@ -378,6 +378,22 @@
     []
   Components:
     - !<own> cc1f2117-b4b5-400d-9efe-0adc5fdb0d76
+- !<SceneObject/a1b2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d>
+  PrefabRemaps:
+    []
+  Name: NameTagLabel
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.200000, y: 1.200000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b2c3d4e5-6f7a-4b8c-9d0e-1f2a3b4c5d6e
+    - !<own> c3d4e5f6-7a8b-4c9d-0e1f-2a3b4c5d6e7f
 - !<Text/a2b34c56-7d89-4e01-f2a3-456789012345>
   PrefabRemaps:
     []
@@ -540,6 +556,87 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<Text/b2c3d4e5-6f7a-4b8c-9d0e-1f2a3b4c5d6e>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: ""
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 60
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: true
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.333000, z: 1.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 1.000000
+      bottom: 0.500000
+      right: 1.000000
+      top: 0.500000
+    CornerRadius: 1.500000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<Canvas/b3c45d67-8e90-4f12-a3b4-567890123456>
   PrefabRemaps:
     []
@@ -628,8 +725,21 @@
     - !<own> c4d56e78-9f01-4a23-b4c5-678901234567
     - !<own> f7a89b01-2c34-4d56-e7f8-901234567890
     - !<own> ef83cb41-8cd1-40ac-9672-54e723395e20
+    - !<own> a1b2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d
   Components:
     - !<own> fff16f8c-b3eb-4092-9d92-3d2bc36b1313
+- !<Canvas/c3d4e5f6-7a8b-4c9d-0e1f-2a3b4c5d6e7f>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
 - !<SceneObject/c4d56e78-9f01-4a23-b4c5-678901234567>
   PrefabRemaps:
     []
@@ -695,6 +805,7 @@
       sadnessText: !<reference.Text> d5e67f89-0a12-4b34-c5d6-789012345678
       neutralText: !<reference.Text> a8b90c12-3d45-4e67-f8a9-012345678901
       hintText: !<reference.Text> 2a462055-824f-4b6d-8d48-20fa4640f77d
+      nameTagText: !<reference.Text> b2c3d4e5-6f7a-4b8c-9d0e-1f2a3b4c5d6e
       backendUrl: "https://flossie-nonfungible-predelinquently.ngrok-free.dev/analyze"
       interval: 0.100000
       debugMode: true

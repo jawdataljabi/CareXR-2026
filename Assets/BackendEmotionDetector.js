@@ -16,6 +16,7 @@ try {
 // @input Component.Text sadnessText {"hint": "Sadness emotion bubble (blue background)"}
 // @input Component.Text neutralText {"hint": "Neutral emotion bubble (blue background)"}
 // @input Component.Text hintText {"hint": "LLM hint bubble (soft grey background, white text)"}
+// @input Component.Text nameTagText {"hint": "Name tag bubble (blue background, white text, above head)"}
 // @input string backendUrl = "https://YOUR-NGROK-URL.ngrok-free.app/analyze" {"hint": "Backend URL for emotion analysis"}
 // @input float interval = 0.1 {"hint": "Seconds between backend API calls"}
 // @input bool debugMode = true {"hint": "Log debug info to console"}
@@ -51,6 +52,13 @@ var hintTarget = 0;
 var hintFadingOut = false;
 var pendingHint = "";
 var currentHintContent = "";
+
+var NAME_TAG_BG_RGB = new vec3(0.000, 0.333, 1.000);
+var NAME_TAG_TEXT_RGB = new vec3(1.000, 1.000, 1.000);
+var NAME_TAG_BG_ALPHA = 1.00;
+var nameTagAlpha = 0;
+var nameTagTarget = 0;
+var currentNameTag = "";
 
 var EMOJI_MAP = {
     "Joy": "\u{1F60A}",
@@ -105,10 +113,16 @@ script.createEvent('OnStartEvent').bind(function () {
         applyAlpha(script.hintText, HINT_TEXT_RGB, HINT_BG_RGB, 0, HINT_BG_ALPHA);
     }
 
+    if (script.nameTagText) {
+        script.nameTagText.text = "";
+        applyAlpha(script.nameTagText, NAME_TAG_TEXT_RGB, NAME_TAG_BG_RGB, 0, NAME_TAG_BG_ALPHA);
+    }
+
     var faceFound = script.createEvent("FaceFoundEvent");
     faceFound.faceIndex = 0;
     faceFound.bind(function () {
         faceIsTracked = true;
+        if (currentNameTag) nameTagTarget = 1;
         debugLog("Face found.");
     });
 
@@ -120,6 +134,7 @@ script.createEvent('OnStartEvent').bind(function () {
         hintTarget = 0;
         hintFadingOut = false;
         pendingHint = "";
+        nameTagTarget = 0;
         debugLog("Face lost.");
     });
 
@@ -135,6 +150,7 @@ script.createEvent('OnStartEvent').bind(function () {
         var dt = getDeltaTime();
         animateEmotions(dt);
         animateHint(dt);
+        animateNameTag(dt);
     });
 
     print("[BackendEmotion] Ready. Waiting for face...");
@@ -183,6 +199,24 @@ function showEmotion(emotion) {
     for (var e in emotionTarget) {
         emotionTarget[e] = (e === emotion) ? 1 : 0;
     }
+}
+
+function animateNameTag(dt) {
+    var step = FADE_SPEED * dt;
+    var prev = nameTagAlpha;
+    nameTagAlpha = lerpAlpha(prev, nameTagTarget, step);
+    if (nameTagAlpha !== prev) {
+        applyAlpha(script.nameTagText, NAME_TAG_TEXT_RGB, NAME_TAG_BG_RGB,
+                   nameTagAlpha, NAME_TAG_BG_ALPHA);
+    }
+}
+
+function showNameTag(name) {
+    if (!script.nameTagText || name === currentNameTag) return;
+    currentNameTag = name;
+    script.nameTagText.text = name;
+    nameTagTarget = 1;
+    debugLog("Name tag set: " + name);
 }
 
 function showHint(text) {
@@ -234,6 +268,7 @@ async function sendToBackend(base64Image) {
             var confidence = json.confidence || 0;
             var latency = json.latency_ms || 0;
             var followUpHint = json.follow_up_hint || "";
+            var nameTag = json.name_tag || "";
 
             debugLog(emotion + " (" + (confidence * 100).toFixed(0) + "%) " + latency + "ms");
             if (followUpHint) debugLog("Hint: " + followUpHint);
@@ -244,6 +279,10 @@ async function sendToBackend(base64Image) {
 
             if (followUpHint && faceIsTracked) {
                 showHint(followUpHint);
+            }
+
+            if (nameTag && faceIsTracked) {
+                showNameTag(nameTag);
             }
         } else {
             var errorText = await response.text();

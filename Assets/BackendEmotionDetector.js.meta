@@ -31,6 +31,7 @@
     hintText: false
     interval: false
     joyText: false
+    nameTagText: false
     neutralText: false
     sadnessText: false
   ScriptTypesHidden:
@@ -46,6 +47,7 @@
       sadnessText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       neutralText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       hintText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      nameTagText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       backendUrl: "https://YOUR-NGROK-URL.ngrok-free.app/analyze"
       interval: 1.500000
       debugMode: true

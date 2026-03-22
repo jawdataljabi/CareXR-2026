@@ -10,6 +10,7 @@ if sys.stdout.encoding != "utf-8":
     sys.stderr = open(sys.stderr.fileno(), mode="w", encoding="utf-8", errors="replace", buffering=1)
 
 import json
+import re
 from flask import Flask, request, Response
 from flask_cors import CORS
 from deepface import DeepFace
@@ -97,6 +98,9 @@ _latest_hint = ""          # most recent follow-up hint from GPT
 _latest_emotion = "Neutral"  # most recent emotion from /analyze (fed to GPT)
 _last_transcript = ""      # last sentence Person 2 said
 _mic_status = "not started"
+_name_tag = ""             # detected name from "my name is X"
+
+_NAME_PATTERN = re.compile(r"\bmy name is (\w+)", re.IGNORECASE)
 
 
 def _set_hint(hint, transcript):
@@ -130,6 +134,25 @@ def _set_mic_status(status):
     global _mic_status
     with _state_lock:
         _mic_status = status
+
+
+def _set_name_tag(name):
+    global _name_tag
+    with _state_lock:
+        _name_tag = name
+
+
+def _get_name_tag():
+    with _state_lock:
+        return _name_tag
+
+
+def _extract_name(transcript):
+    """Check transcript for 'my name is X' and return X, or empty string."""
+    m = _NAME_PATTERN.search(transcript)
+    if m:
+        return m.group(1).capitalize()
+    return ""
 
 
 # ---------------------------------------------------------------------------
@@ -343,6 +366,11 @@ def _process_sentence(pcm_int16):
 
         print(f"[Mic] Person 2: \"{text}\" ({dt*1000:.0f}ms, {duration:.1f}s audio)")
 
+        name = _extract_name(text)
+        if name:
+            _set_name_tag(name)
+            print(f"[Mic] Name detected: \"{name}\"")
+
         emotion = _get_emotion()
         hint = _generate_hint(text, emotion)
         if hint:
@@ -418,6 +446,10 @@ def analyze():
         hint = _consume_hint()
         if hint:
             resp_data["follow_up_hint"] = hint
+
+        name_tag = _get_name_tag()
+        if name_tag:
+            resp_data["name_tag"] = name_tag
 
         return json_response(resp_data)
 
