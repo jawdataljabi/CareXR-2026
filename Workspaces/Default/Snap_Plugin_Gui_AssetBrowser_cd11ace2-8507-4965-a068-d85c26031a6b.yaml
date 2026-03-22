@@ -1,13 +1,36 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 72
+    size: 96
     values:
       - AudioTranscriber.js
       - Base.png
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
       - EmotionDetector.js
+      - EyeGlow.glsl
+      - EyeGlowMaterial.mat
+      - EyeGlowPulse.js
+      - Eyeballs.lspkg
+      - Eyeballs.lspkg/Eyeballs__PUT_UNDER_MAIN_CAM.prefab
+      - Eyeballs.lspkg/Face Mesh 2.facemesh
+      - Eyeballs.lspkg/Materials
+      - Eyeballs.lspkg/Materials/choroid_material 2.mat
+      - Eyeballs.lspkg/Materials/occluder 2.mat
+      - Eyeballs.lspkg/Materials/sclera_material 2.mat
+      - Eyeballs.lspkg/Meshes
+      - Eyeballs.lspkg/Meshes/chronoid.mesh
+      - Eyeballs.lspkg/Meshes/sclera.mesh
+      - Eyeballs.lspkg/Screen Texture.screenTexture
+      - Eyeballs.lspkg/Shaders
+      - Eyeballs.lspkg/Shaders/choroid_material 2.ss_graph
+      - Eyeballs.lspkg/Shaders/occluder 2.ss_graph
+      - Eyeballs.lspkg/Shaders/sclera_material 2.ss_graph
+      - Eyeballs.lspkg/Textures
+      - "Eyeballs.lspkg/Textures/eye_d [EDIT].png"
+      - Eyeballs.lspkg/package.native
+      - Face Mesh 2.facemesh
+      - Face Mesh 2.mat
       - Face Mesh.facemesh
       - Face Mesh.mat
       - FaceMeshTexture.jpg
@@ -73,6 +96,7 @@ CollapsedEntities:
       - ScreenTexture.screenTexture
       - Text3D.mat
       - color_correction.ss_graph
+      - eye_glow_mask.png
       - face_mesh.ss_graph
       - text_3d.ss_graph
   options: 4

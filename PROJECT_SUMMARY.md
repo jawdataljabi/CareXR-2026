@@ -314,6 +314,12 @@ openai
 
 ---
 
+## Spectacles: subtle glow near the eyes (optional, no custom scripts)
+
+Snap does **not** ship a single “eye glow filter” for Spectacles, and **Eye Color** / **Face Inset** / **Face Mask** components are **unsupported** on Spectacles. The supported, **prebuilt-only** approach is **eyes-only Face Mesh geometry** plus a stock **Uber PBR** material with emissive — configured entirely in Lens Studio. See **[SPECTACLES_EYE_GLOW_SETUP.md](SPECTACLES_EYE_GLOW_SETUP.md)** for step-by-step instructions.
+
+---
+
 ## Reference: CueTips Project
 
 The `Other Projects/CueTips/` directory contains a separate Snap Spectacles project that served as reference for:

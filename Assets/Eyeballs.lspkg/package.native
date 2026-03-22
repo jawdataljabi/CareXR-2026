@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/2fcbf7fa-5349-4cc0-b6af-e90d2b27e42b>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 18
+    patch: 0
+    build: 25121106
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Eye Tracking Setup The Eye Tracking effect allows you to track the position and rotation of the user’s eyes Icnludes eyeball meshes (sclera and chroid) and materials, face mesh occluder Place under the Perspective camera and set local position to 0,0,0 Click here to learn more about Eye Tracking"
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 86
+  ExportUid: 02f6a8d9-a593-48b0-ba87-83c5c046b105
+  ComponentUid: c7478958-24c1-4a96-98c4-a06874c329f6
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

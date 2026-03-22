@@ -1,0 +1,312 @@
+- !<ObjectPrefab/ab70e9ae-dbb2-4939-a021-5247bf513085>
+  PackagePath: ""
+  objects:
+    - !<own> 125bf0c6-7d22-4f1f-83e0-133d2368492c
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/125bf0c6-7d22-4f1f-83e0-133d2368492c>
+  PrefabRemaps:
+    - 125bf0c6-7d22-4f1f-83e0-133d2368492c: 125bf0c6-7d22-4f1f-7c1f-ecc2dc97b6d3
+    - 3ab62186-862e-4738-a0d5-4a3a846e5440: 3ab62186-862e-4738-5f2a-b5c57b91abbf
+    - 47977a25-1fa7-4449-96de-f3e977d8230b: 47977a25-1fa7-4449-6921-0c168827dcf4
+    - 55324d46-f3b0-423e-9568-a60f384b29a0: 55324d46-f3b0-423e-6a97-59f0c7b4d65f
+    - 6b4a77b2-bcf0-48d7-8676-f1f488461bc3: 6b4a77b2-bcf0-48d7-7989-0e0b77b9e43c
+    - 79f17ba8-940f-4a18-be3c-4b560837bf2a: 79f17ba8-940f-4a18-41c3-b4a9f7c840d5
+    - 95d0d545-899e-40dd-9d75-dad09e03f5bf: 95d0d545-899e-40dd-628a-252f61fc0a40
+    - 9b9df02a-5b16-4fd6-827a-c4297921213e: 9b9df02a-5b16-4fd6-7d85-3bd686dedec1
+    - 9d77fb6b-e1ef-49bf-a3e1-e50dc01b3512: 9d77fb6b-e1ef-49bf-5c1e-1af23fe4caed
+    - a314d1b9-b9da-469b-830e-e3ac76669655: a314d1b9-b9da-469b-7cf1-1c53899969aa
+    - a63f45a8-ed13-4196-acab-067457b1eea4: a63f45a8-ed13-4196-5354-f98ba84e115b
+    - bada276a-6b90-4785-8411-b66fd349b848: bada276a-6b90-4785-7bee-49902cb647b7
+    - c56bc6d3-0a06-41c5-97a6-5a8d235d5a42: c56bc6d3-0a06-41c5-6859-a572dca2a5bd
+    - c805f4c9-9f51-4018-9735-6d5b1f7b8cf3: c805f4c9-9f51-4018-68ca-92a4e084730c
+    - c8a019bc-acfa-4ccb-8ca1-1bac82df3d89: c8a019bc-acfa-4ccb-735e-e4537d20c276
+    - d7f5415b-bf7d-41d2-8bd2-ea7b271072dc: d7f5415b-bf7d-41d2-742d-1584d8ef8d23
+    - ea0ad832-5f7d-4498-8121-4290a428107f: ea0ad832-5f7d-4498-7ede-bd6f5bd7ef80
+  Name: Eyeballs__PUT_UNDER_MAIN_CAM
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ea0ad832-5f7d-4498-8121-4290a428107f
+    - !<own> 9d77fb6b-e1ef-49bf-a3e1-e50dc01b3512
+    - !<own> d7f5415b-bf7d-41d2-8bd2-ea7b271072dc
+  Components:
+    []
+- !<RenderMeshVisual/3ab62186-862e-4738-a0d5-4a3a846e5440>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 964e8717-a165-4045-8b71-07cf0f0eb3db
+  Mesh: !<reference> bb78e12e-a6f9-4702-b751-cc4270236939
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/47977a25-1fa7-4449-96de-f3e977d8230b>
+  PrefabRemaps:
+    []
+  Name: Choroid
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 79f17ba8-940f-4a18-be3c-4b560837bf2a
+- !<Head/55324d46-f3b0-423e-9568-a60f384b29a0>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: RightEyeballCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 0
+      - 0
+      - 0
+    weights:
+      - 0.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<Head/6b4a77b2-bcf0-48d7-8676-f1f488461bc3>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: HeadCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 0
+      - 0
+      - 0
+    weights:
+      - 0.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/79f17ba8-940f-4a18-be3c-4b560837bf2a>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 964e8717-a165-4045-8b71-07cf0f0eb3db
+  Mesh: !<reference> bb78e12e-a6f9-4702-b751-cc4270236939
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/95d0d545-899e-40dd-9d75-dad09e03f5bf>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 09c5828c-0c5a-4ba3-8dfd-d8489c49ca4d
+  Mesh: !<reference> a094f10c-427a-4b42-8ee8-1722d8ccc1b7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<Head/9b9df02a-5b16-4fd6-827a-c4297921213e>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: LeftEyeballCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 0
+      - 0
+      - 0
+    weights:
+      - 0.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/9d77fb6b-e1ef-49bf-a3e1-e50dc01b3512>
+  PrefabRemaps:
+    []
+  Name: Eyeball Right
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 47977a25-1fa7-4449-96de-f3e977d8230b
+    - !<own> c805f4c9-9f51-4018-9735-6d5b1f7b8cf3
+  Components:
+    - !<own> 55324d46-f3b0-423e-9568-a60f384b29a0
+- !<SceneObject/a314d1b9-b9da-469b-830e-e3ac76669655>
+  PrefabRemaps:
+    []
+  Name: Face Mesh Occluder
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a63f45a8-ed13-4196-acab-067457b1eea4
+- !<RenderMeshVisual/a63f45a8-ed13-4196-acab-067457b1eea4>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cfb1ec00-46c3-41dc-995b-e2ec37d9e0b8
+  Mesh: !<reference> 64dd6fdf-0bb5-4190-9899-733c5d188f3c
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/bada276a-6b90-4785-8411-b66fd349b848>
+  PrefabRemaps:
+    []
+  Name: Sclera
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c8a019bc-acfa-4ccb-8ca1-1bac82df3d89
+- !<SceneObject/c56bc6d3-0a06-41c5-97a6-5a8d235d5a42>
+  PrefabRemaps:
+    []
+  Name: Choroid
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3ab62186-862e-4738-a0d5-4a3a846e5440
+- !<SceneObject/c805f4c9-9f51-4018-9735-6d5b1f7b8cf3>
+  PrefabRemaps:
+    []
+  Name: Sclera
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 95d0d545-899e-40dd-9d75-dad09e03f5bf
+- !<RenderMeshVisual/c8a019bc-acfa-4ccb-8ca1-1bac82df3d89>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 09c5828c-0c5a-4ba3-8dfd-d8489c49ca4d
+  Mesh: !<reference> a094f10c-427a-4b42-8ee8-1722d8ccc1b7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/d7f5415b-bf7d-41d2-8bd2-ea7b271072dc>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.063781, y: -7.881472, z: -48.035378}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> a314d1b9-b9da-469b-830e-e3ac76669655
+  Components:
+    - !<own> 6b4a77b2-bcf0-48d7-8676-f1f488461bc3
+- !<SceneObject/ea0ad832-5f7d-4498-8121-4290a428107f>
+  PrefabRemaps:
+    []
+  Name: Eyeball Left
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c56bc6d3-0a06-41c5-97a6-5a8d235d5a42
+    - !<own> bada276a-6b90-4785-8411-b66fd349b848
+  Components:
+    - !<own> 9b9df02a-5b16-4fd6-827a-c4297921213e
