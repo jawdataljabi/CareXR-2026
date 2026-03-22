@@ -198,9 +198,13 @@ _whisper_model = None
 
 MIC_SAMPLE_RATE = 16000
 MIC_CHUNK_SEC = 0.5
-SILENCE_THRESHOLD_RMS = 300
+CALIBRATION_SEC = 4              # seconds of ambient noise to measure at startup
+NOISE_MULTIPLIER = 2.5           # speech threshold = ambient_rms * this
+MIN_SPEECH_THRESHOLD = 300       # floor so a silent room still works
 SILENCE_DURATION_SEC = 1.5
+MAX_BUFFER_SEC = 15              # safety valve: send even if still talking
 _processing_lock = threading.Lock()
+_speech_threshold = MIN_SPEECH_THRESHOLD  # set after calibration
 
 
 def _rms(audio_chunk):
@@ -233,60 +237,88 @@ def _transcribe_audio(pcm_int16, sample_rate):
     return result.get("text", "").strip()
 
 
+def _calibrate_noise_floor(stream, chunk_samples):
+    """Record a few seconds of ambient audio and return the average RMS."""
+    global _speech_threshold
+    cal_chunks = int(CALIBRATION_SEC / MIC_CHUNK_SEC)
+    rms_values = []
+
+    print(f"[Mic] Calibrating ambient noise ({CALIBRATION_SEC}s — don't talk into the mic)...")
+    for _ in range(cal_chunks):
+        data, overflowed = stream.read(chunk_samples)
+        chunk_int16 = (data[:, 0] * 32767).astype(np.int16)
+        rms_values.append(_rms(chunk_int16))
+
+    ambient_rms = np.mean(rms_values) if rms_values else 0
+    _speech_threshold = max(ambient_rms * NOISE_MULTIPLIER, MIN_SPEECH_THRESHOLD)
+    print(f"[Mic] Ambient RMS: {ambient_rms:.0f} -> speech threshold: {_speech_threshold:.0f}")
+    return _speech_threshold
+
+
 def _mic_thread_fn(device_index=None):
     """Continuously capture from the lapel mic, detect silence boundaries,
-    transcribe completed sentences, and generate GPT hints."""
+    transcribe completed sentences, and generate GPT hints.
+    Uses adaptive noise calibration so it works in loud rooms."""
+    global _speech_threshold
     _set_mic_status("starting")
     chunk_samples = int(MIC_SAMPLE_RATE * MIC_CHUNK_SEC)
     silence_chunks_needed = int(SILENCE_DURATION_SEC / MIC_CHUNK_SEC)
+    max_buffer_chunks = int(MAX_BUFFER_SEC / MIC_CHUNK_SEC)
 
     print(f"[Mic] Opening device={device_index}, rate={MIC_SAMPLE_RATE}, chunk={chunk_samples}")
 
     try:
-        audio_buffer = []
-        silence_count = 0
-        has_speech = False
-
-        def audio_callback(indata, frames, time_info, status):
-            nonlocal audio_buffer, silence_count, has_speech
-            if status:
-                print(f"[Mic] Stream status: {status}")
-            chunk = indata[:, 0].copy()
-            chunk_int16 = (chunk * 32767).astype(np.int16)
-            energy = _rms(chunk_int16)
-
-            if energy > SILENCE_THRESHOLD_RMS:
-                audio_buffer.append(chunk_int16)
-                silence_count = 0
-                has_speech = True
-            else:
-                if has_speech:
-                    silence_count += 1
-                    audio_buffer.append(chunk_int16)
-
-                    if silence_count >= silence_chunks_needed:
-                        full_audio = np.concatenate(audio_buffer)
-                        audio_buffer = []
-                        silence_count = 0
-                        has_speech = False
-                        threading.Thread(
-                            target=_process_sentence,
-                            args=(full_audio,),
-                            daemon=True,
-                        ).start()
-
         with sd.InputStream(
             device=device_index,
             samplerate=MIC_SAMPLE_RATE,
             channels=1,
             dtype="float32",
             blocksize=chunk_samples,
-            callback=audio_callback,
-        ):
+        ) as stream:
+            _calibrate_noise_floor(stream, chunk_samples)
+
             _set_mic_status("listening")
-            print("[Mic] Listening for Person 2...")
+            print(f"[Mic] Listening for Person 2 (threshold={_speech_threshold:.0f})...")
+
+            audio_buffer = []
+            silence_count = 0
+            has_speech = False
+            total_chunks = 0
+
             while True:
-                sd.sleep(1000)
+                data, overflowed = stream.read(chunk_samples)
+                if overflowed:
+                    print("[Mic] WARNING: audio overflow")
+
+                chunk_int16 = (data[:, 0] * 32767).astype(np.int16)
+                energy = _rms(chunk_int16)
+
+                if energy > _speech_threshold:
+                    audio_buffer.append(chunk_int16)
+                    silence_count = 0
+                    has_speech = True
+                    total_chunks += 1
+                elif has_speech:
+                    silence_count += 1
+                    audio_buffer.append(chunk_int16)
+                    total_chunks += 1
+
+                    hit_silence = silence_count >= silence_chunks_needed
+                    hit_max = total_chunks >= max_buffer_chunks
+
+                    if hit_silence or hit_max:
+                        if hit_max and not hit_silence:
+                            print(f"[Mic] Max buffer reached ({MAX_BUFFER_SEC}s), sending anyway")
+                        full_audio = np.concatenate(audio_buffer)
+                        audio_buffer = []
+                        silence_count = 0
+                        has_speech = False
+                        total_chunks = 0
+                        threading.Thread(
+                            target=_process_sentence,
+                            args=(full_audio,),
+                            daemon=True,
+                        ).start()
 
     except Exception as e:
         _set_mic_status(f"error: {e}")
