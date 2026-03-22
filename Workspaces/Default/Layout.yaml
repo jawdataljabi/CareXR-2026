@@ -50,8 +50,25 @@ dock:
         current: 0
     sizes:
       - 297
-      - 703
-      - 42
-      - 648
+      - 951
+      - 43
+      - 399
     type: splitter
     orientation: horizontal
+  windows:
+    - items:
+        - items:
+            - persistentName: Snap.Plugin.Gui.AssetLibraryPanel
+              Uuid: d5a14709-c6a5-410a-925b-8bea5cb68fe5
+          type: section
+          current: 0
+      sizes:
+        - 678
+      type: splitter
+      orientation: vertical
+      geometry:
+        x: 292
+        y: 194
+        w: 1124
+        h: 680
+      screen: NE160QDM-NM4

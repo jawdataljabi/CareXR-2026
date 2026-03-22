@@ -40,7 +40,7 @@ MAX_INPUT_DIM = 480
 EMOTION_MAP = {
     "happy": "Joy",
     "sad": "Sadness",
-    "angry": "Anger",
+    "angry": "Neutral",
     "neutral": "Neutral",
     "disgust": "Neutral",
     "fear": "Neutral",
