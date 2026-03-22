@@ -26,10 +26,10 @@ Spectacles (Lens)                    Local Machine
 │    .fetch()         │  (emotion +  │  │  - Returns emotion + hint    │    │
 │                     │   hint)      │  └──────────────────────────────┘    │
 │ EmotionLabel        │              │                                      │
-│  (Text3D, left)     │              │  ┌──────────────────────────────┐    │
+│  (Text bubble,left) │              │  ┌──────────────────────────────┐    │
 │                     │              │  │ Mic Thread (background)      │    │
 │ HintLabel           │              │  │  - Lapel mic (sounddevice)   │    │
-│  (Text3D, right)    │              │  │  - Adaptive noise calibration│    │
+│  (Text bubble,right)│              │  │  - Adaptive noise calibration│    │
 └─────────────────────┘              │  │  - Whisper transcription     │    │
                                      │  │  - GPT-4o-mini hint gen      │    │
               ┌──────────┐           │  └──────────────────────────────┘    │
@@ -54,7 +54,7 @@ Spectacles (Lens)                    Local Machine
 
 | File | Purpose | Status |
 |------|---------|--------|
-| `BackendEmotionDetector.js` | Captures camera frames on Spectacles, sends to backend, displays emotion (left) and follow-up hints (right) as Text3D above tracked face | **Active** (Spectacles only) |
+| `BackendEmotionDetector.js` | Captures camera frames on Spectacles, sends to backend, displays emotion (left) and follow-up hints (right) as Text bubbles above tracked face | **Active** (Spectacles only) |
 | `EmotionDetector.js` | Original blend-shape-based emotion detector using face mesh weights | **Disabled** (blend shapes return near-zero on Spectacles) |
 | `AudioTranscriber.js` | Previous on-device ASR approach | **Disabled** (replaced by backend lapel mic approach) |
 
@@ -83,8 +83,8 @@ Scene
 │   └── Effects
 │       └── Head Binding (face tracking, faceIndex 0)
 │           ├── EmotionFaceMesh (RenderMeshVisual, blend shapes, layer 0/hidden)
-│           ├── EmotionLabel (Text3D, size 72, position x:-8 y:14, scale 1.2)
-│           └── HintLabel (Text3D, size 42, position x:+8 y:14, scale 1.2)
+│           ├── EmotionLabel (Text + bubble background, size 60, position x:-8 y:14, scale 1.2, Canvas)
+│           └── HintLabel (Text + bubble background, size 36, position x:+8 y:14, scale 1.2, Canvas)
 ├── Lighting
 │   ├── Envmap (environment light)
 │   └── Light (directional light)
@@ -280,6 +280,8 @@ python emotion_server.py
 
 12. **LowQuality compression**: `Base64.encodeTextureAsync` with `MediumQuality` silently fails on Spectacles. `LowQuality` works reliably (47-84 KB payloads).
 
+13. **Text bubbles over plain Text3D**: Switched from `Text3D` (extruded 3D text) to `Text` with enabled `Background` (semi-transparent dark rounded rectangle). Recycled from CueTips reference project's UI pattern. Each label SceneObject has a world-space `Canvas` so the 2D Text renders correctly under the Head Binding in 3D space.
+
 ---
 
 ## Dependencies (Backend/requirements.txt)
@@ -311,3 +313,5 @@ The `Other Projects/CueTips/` directory contains a separate Snap Spectacles proj
 - **Remote fetch pattern**: Using `InternetModule` for HTTP from Lens Studio
 
 Key difference: CueTips uses Google Gemini (LLM) for emotion analysis, while CareXR uses DeepFace (local ML) for emotions and GPT-4o-mini only for conversation hints.
+
+Additionally, CareXR recycled CueTips' **text bubble UI pattern** (Text component with Background enabled, world-space Canvas) for displaying the emotion label and LLM hint as rounded bubbles near the tracked head.

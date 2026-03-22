@@ -11,8 +11,8 @@ try {
     print("[BackendEmotion] Spectacles modules not available (preview mode). Script disabled.");
 }
 
-// @input Component.Text3D emotionText {"hint": "Text3D component to display detected emotion"}
-// @input Component.Text3D hintText {"hint": "Text3D component to display follow-up hint from LLM"}
+// @input Component.Text emotionText {"hint": "Text component to display detected emotion (with bubble background)"}
+// @input Component.Text hintText {"hint": "Text component to display follow-up hint from LLM (with bubble background)"}
 // @input string backendUrl = "https://YOUR-NGROK-URL.ngrok-free.app/analyze" {"hint": "Backend URL for emotion analysis"}
 // @input float interval = 0.1 {"hint": "Seconds between backend API calls"}
 // @input bool debugMode = true {"hint": "Log debug info to console"}

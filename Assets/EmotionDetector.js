@@ -1,5 +1,5 @@
 // @input Component.RenderMeshVisual faceMeshVisual {"hint": "Reference to the Face Mesh RenderMeshVisual"}
-// @input Component.Text3D emotionText {"hint": "Text3D component to display detected emotion above the head"}
+// @input Component.Text emotionText {"hint": "Text component to display detected emotion above the head (with bubble background)"}
 // @input float updateInterval = 0.1 {"hint": "Seconds between emotion classification updates"}
 // @input float emotionThreshold = 0.2 {"hint": "Minimum score to register an emotion (vs Neutral)"}
 // @input float smoothingFactor = 0.4 {"hint": "Smoothing for score transitions (0=no smoothing, 1=instant)"}

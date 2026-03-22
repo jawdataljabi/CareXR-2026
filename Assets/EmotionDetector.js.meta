@@ -45,7 +45,7 @@
     []
   DefaultScriptInputs:
     - faceMeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
-      emotionText: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      emotionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       updateInterval: 0.150000
       emotionThreshold: 0.250000
       smoothingFactor: 0.300000

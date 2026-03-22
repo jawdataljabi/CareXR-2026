@@ -192,10 +192,10 @@
     bottom: -20.000000
     right: 15.000000
     top: 20.000000
-- !<Text3D/2a462055-824f-4b6d-8d48-20fa4640f77d>
+- !<Text/2a462055-824f-4b6d-8d48-20fa4640f77d>
   PrefabRemaps:
     []
-  Name: Text3D
+  Name: Text
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
@@ -204,16 +204,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 5f5738d2-176a-42fb-866d-3b17b7dcb858
   Text: ""
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 42
-  ExtrusionDepth: 0.400000
-  ExtrudeDirection: Both
+  FontSize: 36
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
     left: -12.000000
@@ -222,12 +218,61 @@
     top: 4.000000
   OverflowVertical: Overflow
   OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: true
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.080000, y: 0.080000, z: 0.180000, w: 0.800000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 1.500000
+      bottom: 0.750000
+      right: 1.500000
+      top: 0.750000
+    CornerRadius: 1.500000
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-  EnableBatching: false
+  DepthTest: false
+  TwoSided: false
 - !<SceneObject/41d07d34-c1fe-4c0b-98c8-3fa1af571619>
   PrefabRemaps:
     []
@@ -287,7 +332,7 @@
   ScriptInputs:
     "":
       faceMeshVisual: !<reference.RenderMeshVisual> 7ce65175-07e7-4927-9672-ac649f2b6089
-      emotionText: !<reference.Text3D> a3624266-e170-42a9-95ff-5dbf78c8a403
+      emotionText: !<reference.Text> a3624266-e170-42a9-95ff-5dbf78c8a403
       updateInterval: 0.100000
       emotionThreshold: 0.200000
       smoothingFactor: 0.400000
@@ -348,10 +393,11 @@
     []
   Components:
     - !<own> a3624266-e170-42a9-95ff-5dbf78c8a403
-- !<Text3D/a3624266-e170-42a9-95ff-5dbf78c8a403>
+    - !<own> b7c14e33-9f21-4a88-b2d5-8e7c3f5a1d42
+- !<Text/a3624266-e170-42a9-95ff-5dbf78c8a403>
   PrefabRemaps:
     []
-  Name: Text3D
+  Name: Text
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
@@ -360,16 +406,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 5f5738d2-176a-42fb-866d-3b17b7dcb858
   Text: ""
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 72
-  ExtrusionDepth: 0.400000
-  ExtrudeDirection: Both
+  FontSize: 60
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
     left: -7.500000
@@ -378,12 +420,73 @@
     top: 2.250000
   OverflowVertical: Overflow
   OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: true
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.080000, y: 0.080000, z: 0.180000, w: 0.800000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 1.000000
+      bottom: 0.500000
+      right: 1.000000
+      top: 0.500000
+    CornerRadius: 1.500000
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-  EnableBatching: false
+  DepthTest: false
+  TwoSided: false
+- !<Canvas/b7c14e33-9f21-4a88-b2d5-8e7c3f5a1d42>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
 - !<Camera/bcb45f7c-43d7-4225-9726-7dac6530d210>
   PrefabRemaps:
     []
@@ -493,14 +596,26 @@
     {}
   ScriptInputs:
     "":
-      emotionText: !<reference.Text3D> a3624266-e170-42a9-95ff-5dbf78c8a403
-      hintText: !<reference.Text3D> 2a462055-824f-4b6d-8d48-20fa4640f77d
+      emotionText: !<reference.Text> a3624266-e170-42a9-95ff-5dbf78c8a403
+      hintText: !<reference.Text> 2a462055-824f-4b6d-8d48-20fa4640f77d
       backendUrl: "https://flossie-nonfungible-predelinquently.ngrok-free.dev/analyze"
       interval: 0.100000
       debugMode: true
   ScriptTypes:
     "":
       {}
+- !<Canvas/d3e28a55-7b14-4c92-a8f1-6c9d2e4b3a75>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -12.000000
+    bottom: -4.000000
+    right: 12.000000
+    top: 4.000000
 - !<SceneObject/da0e82b2-1b5c-43b5-8ce2-bbcc2b5455ab>
   PrefabRemaps:
     []
@@ -546,6 +661,7 @@
     []
   Components:
     - !<own> 2a462055-824f-4b6d-8d48-20fa4640f77d
+    - !<own> d3e28a55-7b14-4c92-a8f1-6c9d2e4b3a75
 - !<SceneObject/fdae043b-7f67-4caa-a969-c97c63e95fa1>
   PrefabRemaps:
     []
