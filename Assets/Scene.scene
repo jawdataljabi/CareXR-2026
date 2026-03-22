@@ -406,7 +406,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.200000, y: 0.200000, z: 0.220000, w: 1.000000}
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -440,7 +440,7 @@
     Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.686000, y: 0.918000, z: 0.710000, w: 0.900000}
+      Color: {x: 0.411765, y: 0.549020, z: 0.423529, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
@@ -487,7 +487,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.200000, y: 0.200000, z: 0.220000, w: 1.000000}
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -521,7 +521,7 @@
     Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.941000, y: 0.902000, z: 0.827000, w: 0.900000}
+      Color: {x: 0.756863, y: 0.756863, z: 0.396078, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
@@ -741,7 +741,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.200000, y: 0.200000, z: 0.220000, w: 1.000000}
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -775,7 +775,7 @@
     Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.654902, y: 0.780392, z: 0.905882, w: 1.000000}
+      Color: {x: 0.000000, y: 0.219608, z: 0.654902, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000

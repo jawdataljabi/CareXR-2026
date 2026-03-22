@@ -12,9 +12,9 @@ try {
     print("[BackendEmotion] Spectacles modules not available (preview mode). Script disabled.");
 }
 
-// @input Component.Text joyText {"hint": "Joy emotion bubble (pastel green background)"}
-// @input Component.Text sadnessText {"hint": "Sadness emotion bubble (pastel blue background)"}
-// @input Component.Text neutralText {"hint": "Neutral emotion bubble (pastel beige background)"}
+// @input Component.Text joyText {"hint": "Joy emotion bubble (blue background)"}
+// @input Component.Text sadnessText {"hint": "Sadness emotion bubble (blue background)"}
+// @input Component.Text neutralText {"hint": "Neutral emotion bubble (blue background)"}
 // @input Component.Text hintText {"hint": "LLM hint bubble (soft grey background, white text)"}
 // @input string backendUrl = "https://YOUR-NGROK-URL.ngrok-free.app/analyze" {"hint": "Backend URL for emotion analysis"}
 // @input float interval = 0.1 {"hint": "Seconds between backend API calls"}
@@ -35,12 +35,12 @@ var emotionTarget = { Joy: 0, Sadness: 0, Neutral: 0 };
 var emotionComps = {};
 
 var EMOTION_BG = {
-    Joy:     new vec3(0.686, 0.918, 0.710),
-    Sadness: new vec3(0.686, 0.812, 0.941),
-    Neutral: new vec3(0.941, 0.902, 0.827)
+    Joy:     new vec3(0.411, 0.75, 0.408),
+    Sadness: new vec3(0.000, 0.140, 0.400),
+    Neutral: new vec3(0.75, 0.75, 0.1)
 };
-var EMOTION_TEXT_RGB = new vec3(0.200, 0.200, 0.220);
-var EMOTION_BG_ALPHA = 0.90;
+var EMOTION_TEXT_RGB = new vec3(1.000, 1.000, 1.000);
+var EMOTION_BG_ALPHA = 1.00;
 
 var HINT_BG_RGB = new vec3(0.400, 0.400, 0.420);
 var HINT_TEXT_RGB = new vec3(1.0, 1.0, 1.0);
