@@ -25,11 +25,11 @@ Spectacles (Lens)                    Local Machine
 │  - InternetModule   │  JSON resp   │  │  - DeepFace emotion analysis │    │
 │    .fetch()         │  (emotion +  │  │  - Returns emotion + hint    │    │
 │                     │   hint)      │  └──────────────────────────────┘    │
-│ EmotionLabel        │              │                                      │
-│  (Text bubble,left) │              │  ┌──────────────────────────────┐    │
+│ 3 Emotion Bubbles   │              │                                      │
+│  (pastel crossfade) │              │  ┌──────────────────────────────┐    │
 │                     │              │  │ Mic Thread (background)      │    │
 │ HintLabel           │              │  │  - Lapel mic (sounddevice)   │    │
-│  (Text bubble,right)│              │  │  - Adaptive noise calibration│    │
+│  (grey iMsg bubble) │              │  │  - Adaptive noise calibration│    │
 └─────────────────────┘              │  │  - Whisper transcription     │    │
                                      │  │  - GPT-4o-mini hint gen      │    │
               ┌──────────┐           │  └──────────────────────────────┘    │
@@ -54,7 +54,7 @@ Spectacles (Lens)                    Local Machine
 
 | File | Purpose | Status |
 |------|---------|--------|
-| `BackendEmotionDetector.js` | Captures camera frames on Spectacles, sends to backend, displays emotion (left) and follow-up hints (right) as Text bubbles above tracked face | **Active** (Spectacles only) |
+| `BackendEmotionDetector.js` | Captures camera frames on Spectacles, sends to backend. Displays emotion as color-coded pastel bubbles (green/blue/beige) with crossfade, and LLM hints as iMessage-style grey bubbles with fade transitions | **Active** (Spectacles only) |
 | `EmotionDetector.js` | Original blend-shape-based emotion detector using face mesh weights | **Disabled** (blend shapes return near-zero on Spectacles) |
 | `AudioTranscriber.js` | Previous on-device ASR approach | **Disabled** (replaced by backend lapel mic approach) |
 
@@ -83,8 +83,10 @@ Scene
 │   └── Effects
 │       └── Head Binding (face tracking, faceIndex 0)
 │           ├── EmotionFaceMesh (RenderMeshVisual, blend shapes, layer 0/hidden)
-│           ├── EmotionLabel (Text + bubble background, size 60, position x:-8 y:14, scale 1.2, Canvas)
-│           └── HintLabel (Text + bubble background, size 36, position x:+8 y:14, scale 1.2, Canvas)
+│           ├── JoyLabel (Text bubble, pastel green bg, dark text, size 60, x:-8 y:14, Canvas)
+│           ├── SadnessLabel (Text bubble, pastel blue bg, dark text, size 60, x:-8 y:14, Canvas)
+│           ├── NeutralLabel (Text bubble, pastel beige bg, dark text, size 60, x:-8 y:14, Canvas)
+│           └── HintLabel (Text bubble, soft grey bg, white text, size 36, x:+8 y:14, Canvas)
 ├── Lighting
 │   ├── Envmap (environment light)
 │   └── Light (directional light)
@@ -110,9 +112,9 @@ Scene
 2. **Face Tracking**: `FaceFoundEvent` / `FaceLostEvent` (faceIndex 0)
 3. **Frame Capture**: On each new frame (throttled to 0.1s), encodes as Base64 JPEG with `CompressionQuality.LowQuality`
 4. **Backend Request**: POST to ngrok URL with `{ image: <base64> }` and `ngrok-skip-browser-warning` header
-5. **Display Emotion**: Shows emotion label (emoji + name) on EmotionLabel (left side, 30 degrees up)
-6. **Display Hint**: If response contains `follow_up_hint`, shows it on HintLabel (right side, 30 degrees up). New hints replace old ones.
-7. **Face Lost**: Both EmotionLabel and HintLabel are hidden
+5. **Display Emotion**: Crossfades to the matching emotion bubble (Joy=pastel green, Sadness=pastel blue, Neutral=pastel beige) on the left side. All three bubbles overlap at the same position; only the active one is fully visible.
+6. **Display Hint**: If response contains `follow_up_hint`, fades out the current hint bubble and fades in the new one (soft grey iMessage-style bubble, white text) on the right side.
+7. **Face Lost**: All emotion bubbles and hint bubble fade out
 
 ### Backend (emotion_server.py)
 
@@ -270,7 +272,7 @@ python emotion_server.py
 
 7. **Piggybacking hints on /analyze**: Rather than adding a separate polling endpoint for hints, the follow-up hint is attached to the next `/analyze` response. This avoids extra network calls from the Spectacles and simplifies the client-side code.
 
-8. **One-shot hint delivery**: Hints are consumed (cleared) when read, so the same hint doesn't repeat on every frame. New hints from GPT replace old ones.
+8. **One-shot hint delivery**: Hints are consumed (cleared) when read, so the same hint doesn't repeat on every frame. New hints from GPT trigger a fade-out/fade-in transition.
 
 9. **Processing lock for Whisper**: A `threading.Lock` prevents multiple concurrent Whisper transcriptions, which would thrash the CPU and produce garbled results.
 
@@ -280,7 +282,9 @@ python emotion_server.py
 
 12. **LowQuality compression**: `Base64.encodeTextureAsync` with `MediumQuality` silently fails on Spectacles. `LowQuality` works reliably (47-84 KB payloads).
 
-13. **Text bubbles over plain Text3D**: Switched from `Text3D` (extruded 3D text) to `Text` with enabled `Background` (semi-transparent dark rounded rectangle). Recycled from CueTips reference project's UI pattern. Each label SceneObject has a world-space `Canvas` so the 2D Text renders correctly under the Head Binding in 3D space.
+13. **Color-coded emotion bubbles with crossfade**: Three overlapping `Text` bubbles (Joy=pastel green, Sadness=pastel blue, Neutral=pastel beige) at the same position. The script animates alpha to crossfade between emotions — the active one fades in while others fade out. Recycled from CueTips' text bubble UI pattern. Each has a world-space `Canvas` for rendering under Head Binding.
+
+14. **iMessage-style hint bubble**: The LLM hint uses a soft grey background with white text (similar to Apple iMessage received messages). When a new hint arrives, the old bubble fades out, text swaps, and the new bubble fades in.
 
 ---
 

@@ -1,9 +1,10 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 72
+    size: 73
     values:
       - AudioTranscriber.js
+      - BackendEmotionDetector.js
       - Base.png
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr

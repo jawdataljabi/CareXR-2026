@@ -28,9 +28,11 @@
   ScriptInputsHidden:
     backendUrl: false
     debugMode: false
-    emotionText: false
     hintText: false
     interval: false
+    joyText: false
+    neutralText: false
+    sadnessText: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,7 +42,9 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - emotionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+    - joyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      sadnessText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      neutralText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       hintText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       backendUrl: "https://YOUR-NGROK-URL.ngrok-free.app/analyze"
       interval: 1.500000
