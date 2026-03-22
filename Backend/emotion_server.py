@@ -98,9 +98,15 @@ _latest_hint = ""          # most recent follow-up hint from GPT
 _latest_emotion = "Neutral"  # most recent emotion from /analyze (fed to GPT)
 _last_transcript = ""      # last sentence Person 2 said
 _mic_status = "not started"
-_name_tag = ""             # detected name from "my name is X"
+# In-memory only: restarting this server clears the name. Lens may still show the
+# previous tag until the lens restarts or a new "my name is ..." is detected.
+_name_tag = ""             # detected name from "my name is X" (stored as transcribed)
 
-_NAME_PATTERN = re.compile(r"\bmy name is (\w+)", re.IGNORECASE)
+# Capture name as spoken until punctuation, end of string, or common clause starters
+_NAME_PATTERN = re.compile(
+    r"\bmy name is\s+(.+?)(?:[.!?]|\s+how\b|\s+and\b|\s+but\b|\s+what\b|\s+when\b|\s+where\b|\s+why\b|$)",
+    re.IGNORECASE,
+)
 
 
 def _set_hint(hint, transcript):
@@ -152,10 +158,10 @@ def _consume_name_tag():
 
 
 def _extract_name(transcript):
-    """Check transcript for 'my name is X' and return X, or empty string."""
-    m = _NAME_PATTERN.search(transcript)
+    """Check transcript for 'my name is X' and return X as transcribed (no reformatting)."""
+    m = _NAME_PATTERN.search(transcript.strip())
     if m:
-        return m.group(1).capitalize()
+        return m.group(1).strip().rstrip(",")
     return ""
 
 
@@ -165,10 +171,10 @@ def _extract_name(transcript):
 
 SYSTEM_PROMPT = """You are a gentle conversation coach for a person with autism who is wearing AR glasses.
 You observe what the other person in the conversation just said, and their visible emotion.
-Your job is to provide ONE short, simple follow-up hint that the wearer can say or ask next.
+Your job is to provide ONE tiny follow-up hint the wearer can say or ask next.
 
 Rules:
-- Keep it to one short sentence (under 15 words).
+- Maximum 6-7 words. Prefer fewer if it still makes sense — be as concise as possible.
 - Use warm, encouraging, simple language.
 - Frame as a suggestion, not a command (e.g. "Maybe ask about..." or "You could say...").
 - Match the emotional tone — if the person seems sad, be gentle; if happy, be upbeat.
@@ -203,7 +209,7 @@ def _generate_hint(transcript, emotion):
                 {"role": "user", "content": user_msg},
             ],
             temperature=0.7,
-            max_tokens=80,
+            max_tokens=40,
             response_format={"type": "json_object"},
         )
         raw = resp.choices[0].message.content.strip()
