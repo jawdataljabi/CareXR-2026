@@ -12,6 +12,7 @@ try {
 }
 
 // @input Component.Text3D emotionText {"hint": "Text3D component to display detected emotion"}
+// @input Component.Text3D hintText {"hint": "Text3D component to display follow-up hint from LLM"}
 // @input string backendUrl = "https://YOUR-NGROK-URL.ngrok-free.app/analyze" {"hint": "Backend URL for emotion analysis"}
 // @input float interval = 0.1 {"hint": "Seconds between backend API calls"}
 // @input bool debugMode = true {"hint": "Log debug info to console"}
@@ -44,6 +45,18 @@ function hideEmotion() {
     script.emotionText.getSceneObject().enabled = false;
 }
 
+function showHint(text) {
+    if (!script.hintText) return;
+    script.hintText.text = text;
+    script.hintText.getSceneObject().enabled = true;
+}
+
+function hideHint() {
+    if (!script.hintText) return;
+    script.hintText.text = "";
+    script.hintText.getSceneObject().enabled = false;
+}
+
 function debugLog(msg) {
     if (script.debugMode) {
         print("[BackendEmotion] " + msg);
@@ -73,6 +86,7 @@ script.createEvent('OnStartEvent').bind(function() {
     }
 
     hideEmotion();
+    hideHint();
 
     var faceFound = script.createEvent("FaceFoundEvent");
     faceFound.faceIndex = 0;
@@ -87,6 +101,7 @@ script.createEvent('OnStartEvent').bind(function() {
         faceIsTracked = false;
         lastLabel = "";
         hideEmotion();
+        hideHint();
         debugLog("Face lost.");
     });
 
@@ -146,13 +161,22 @@ async function sendToBackend(base64Image) {
             var label = responseJson.label || "";
             var latency = responseJson.latency_ms || 0;
 
+            var followUpHint = responseJson.follow_up_hint || "";
+
             debugLog(emotion + " (" + (confidence * 100).toFixed(0) + "%) " + latency + "ms");
+            if (followUpHint) {
+                debugLog("Hint: " + followUpHint);
+            }
 
             if (emotion !== "none" && faceIsTracked) {
                 lastLabel = label || (EMOJI_MAP[emotion] || "") + " " + emotion;
                 showEmotion(lastLabel);
             } else if (!faceIsTracked) {
                 hideEmotion();
+            }
+
+            if (followUpHint && faceIsTracked) {
+                showHint(followUpHint);
             }
         } else {
             var errorText = await response.text();

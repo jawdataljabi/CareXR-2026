@@ -192,6 +192,42 @@
     bottom: -20.000000
     right: 15.000000
     top: 20.000000
+- !<Text3D/2a462055-824f-4b6d-8d48-20fa4640f77d>
+  PrefabRemaps:
+    []
+  Name: Text3D
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 5f5738d2-176a-42fb-866d-3b17b7dcb858
+  Text: ""
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 42
+  ExtrusionDepth: 0.400000
+  ExtrudeDirection: Both
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -12.000000
+    bottom: -4.000000
+    right: 12.000000
+    top: 4.000000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/41d07d34-c1fe-4c0b-98c8-3fa1af571619>
   PrefabRemaps:
     []
@@ -409,6 +445,7 @@
   Children:
     - !<own> 540f3a91-aa6b-4ae7-9e1b-57824f5b23ad
     - !<own> 9150c9ab-8dc5-4dbf-85dd-983e9298c1a4
+    - !<own> ef83cb41-8cd1-40ac-9672-54e723395e20
   Components:
     - !<own> fff16f8c-b3eb-4092-9d92-3d2bc36b1313
 - !<ScreenTransform/c7bf28d3-8f53-4065-b680-9ab4508b73d0>
@@ -457,6 +494,7 @@
   ScriptInputs:
     "":
       emotionText: !<reference.Text3D> a3624266-e170-42a9-95ff-5dbf78c8a403
+      hintText: !<reference.Text3D> 2a462055-824f-4b6d-8d48-20fa4640f77d
       backendUrl: "https://flossie-nonfungible-predelinquently.ngrok-free.dev/analyze"
       interval: 0.100000
       debugMode: true
@@ -493,6 +531,21 @@
     []
   Components:
     - !<own> 604ed810-379a-4971-af14-ee1db25b6ea3
+- !<SceneObject/ef83cb41-8cd1-40ac-9672-54e723395e20>
+  PrefabRemaps:
+    []
+  Name: HintLabel
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 8.000000, y: 14.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.200000, y: 1.200000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2a462055-824f-4b6d-8d48-20fa4640f77d
 - !<SceneObject/fdae043b-7f67-4caa-a969-c97c63e95fa1>
   PrefabRemaps:
     []

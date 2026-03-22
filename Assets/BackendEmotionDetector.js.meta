@@ -29,6 +29,7 @@
     backendUrl: false
     debugMode: false
     emotionText: false
+    hintText: false
     interval: false
   ScriptTypesHidden:
     {}
@@ -40,6 +41,7 @@
     []
   DefaultScriptInputs:
     - emotionText: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      hintText: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
       backendUrl: "https://YOUR-NGROK-URL.ngrok-free.app/analyze"
       interval: 1.500000
       debugMode: true
