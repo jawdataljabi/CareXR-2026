@@ -7,3 +7,6 @@ python-dotenv
 numpy
 mtcnn
 waitress
+openai-whisper
+sounddevice
+openai

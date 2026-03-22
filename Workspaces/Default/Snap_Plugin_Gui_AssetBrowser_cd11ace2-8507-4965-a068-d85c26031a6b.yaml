@@ -1,11 +1,12 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 70
+    size: 73
     values:
       - AudioTranscriber.js
       - BackendEmotionDetector.js
       - Base.png
+      - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
       - EmotionDetector.js
       - Face Mesh.facemesh
@@ -68,6 +69,8 @@ CollapsedEntities:
       - Glasses Pack 2.lspkg/Textures/reflection_4.jpg
       - Glasses Pack 2.lspkg/Textures/shadow.jpg
       - Glasses Pack 2.lspkg/package.native
+      - Render Target.renderTarget
+      - Scene.scene
       - ScreenTexture.screenTexture
       - Text3D.mat
       - color_correction.ss_graph
